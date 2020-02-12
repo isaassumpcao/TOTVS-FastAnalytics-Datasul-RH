@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 17:11:50 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.52" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata11" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#pessoa_fisica.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#pessoa_fisica.csv" name="pessoa_fisica_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#pessoa_fisica.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_PESSOA_FISIC" type="string"/>
+<Field name="COD_PESSOA_FISIC" type="string"/>
+<Field name="NOM_PESSOA_FISIC" type="string"/>
+<Field name="ID_FEDERAL" type="string"/>
+<Field name="PAIS" type="string"/>
+<Field name="UF" type="string"/>
+<Field name="CIDADE" type="string"/>
+<Field name="COD_CARTEIRA_IDENTIDADE" type="string"/>
+<Field name="COD_ORGAO_EMISSOR" type="string"/>
+<Field name="DATA_NASCIMENTO" type="string"/>
+<Field name="GRAU_INSTRUCAO" type="string"/>
+<Field name="SEXO" type="string"/>
+<Field eofAsDelimiter="false" name="ESTADO_CIVIL" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata12" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#pessoa_fisica.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#pessoa_fisica.csv" name="pessoa_fisica_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#pessoa_fisica.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_PESSOA_FISIC" type="string"/>
+<Field name="COD_PESSOA_FISIC" type="string"/>
+<Field name="NOM_PESSOA_FISIC" type="string"/>
+<Field name="ID_FEDERAL" type="string"/>
+<Field name="PAIS" type="string"/>
+<Field name="UF" type="string"/>
+<Field name="CIDADE" type="string"/>
+<Field name="COD_CARTEIRA_IDENTIDADE" type="string"/>
+<Field name="COD_ORGAO_EMISSOR" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_NASCIMENTO" type="date"/>
+<Field name="GRAU_INSTRUCAO" type="string"/>
+<Field name="SEXO" type="string"/>
+<Field eofAsDelimiter="false" name="ESTADO_CIVIL" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET PESSOA FÍSICA (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="12" y="18"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#pessoa_fisica.csv" guiName="Pessoa Física" guiX="27" guiY="49" id="PESSOA_FISICA" type="DATA_READER"/>
+<Node dataset="dataset.pessoafisica" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.pessoafisica&quot;,&quot;datasetTitle&quot;:&quot;Pessoa Física&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.cidadepessoafisica&quot;,&quot;title&quot;:&quot;Cidade Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_cidadepessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.cidadepessoafisica&quot;,&quot;title&quot;:&quot;Cidade Pessoa Física&quot;,&quot;prettyId&quot;:&quot;cidadepessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;CIDADE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.codigopessoafisica&quot;,&quot;title&quot;:&quot;Código Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_codigopessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.codigopessoafisica&quot;,&quot;title&quot;:&quot;Código Pessoa Física&quot;,&quot;prettyId&quot;:&quot;codigopessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;COD_PESSOA_FISIC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.cpfpessoafisica&quot;,&quot;title&quot;:&quot;CPF Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_cpfpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.cpfpessoafisica&quot;,&quot;title&quot;:&quot;CPF Pessoa Física&quot;,&quot;prettyId&quot;:&quot;cpfpessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;ID_FEDERAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.estadocivilpessoafisica&quot;,&quot;title&quot;:&quot;Estado Civil Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_estadocivilpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.estadocivilpessoafisica&quot;,&quot;title&quot;:&quot;Estado Civil Pessoa Física&quot;,&quot;prettyId&quot;:&quot;estadocivilpessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;ESTADO_CIVIL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.grauinstrucaopessoafisica&quot;,&quot;title&quot;:&quot;Grau Instrução Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_grauinstrucaopessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.grauinstrucaopessoafisica&quot;,&quot;title&quot;:&quot;Grau Instrução Pessoa Física&quot;,&quot;prettyId&quot;:&quot;grauinstrucaopessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;GRAU_INSTRUCAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.identidadepessoafisica&quot;,&quot;title&quot;:&quot;Identidade Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_identidadepessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.identidadepessoafisica&quot;,&quot;title&quot;:&quot;Identidade Pessoa Física&quot;,&quot;prettyId&quot;:&quot;identidadepessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;COD_CARTEIRA_IDENTIDADE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.nomepessoafisica&quot;,&quot;title&quot;:&quot;Nome Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_nomepessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.nomepessoafisica&quot;,&quot;title&quot;:&quot;Nome Pessoa Física&quot;,&quot;prettyId&quot;:&quot;nomepessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;NOM_PESSOA_FISIC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.orgaoemissorpessoafisica&quot;,&quot;title&quot;:&quot;Órgão Emissor Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_orgaoemissorpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.orgaoemissorpessoafisica&quot;,&quot;title&quot;:&quot;Órgão Emissor Pessoa Física&quot;,&quot;prettyId&quot;:&quot;orgaoemissorpessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;COD_ORGAO_EMISSOR&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.paispessoafisica&quot;,&quot;title&quot;:&quot;País Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_paispessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.paispessoafisica&quot;,&quot;title&quot;:&quot;País Pessoa Física&quot;,&quot;prettyId&quot;:&quot;paispessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;PAIS&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.pkpessoafisica&quot;,&quot;title&quot;:&quot;PK Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_pkpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.pkpessoafisica&quot;,&quot;title&quot;:&quot;PK Pessoa Física&quot;,&quot;prettyId&quot;:&quot;pkpessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;PK_PESSOA_FISIC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.sexopessoafisica&quot;,&quot;title&quot;:&quot;Sexo Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_sexopessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.sexopessoafisica&quot;,&quot;title&quot;:&quot;Sexo Pessoa Física&quot;,&quot;prettyId&quot;:&quot;sexopessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;SEXO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.ufpessoafisica&quot;,&quot;title&quot;:&quot;UF Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_ufpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.ufpessoafisica&quot;,&quot;title&quot;:&quot;UF Pessoa Física&quot;,&quot;prettyId&quot;:&quot;ufpessoafisica&quot;,&quot;assignedMetadataField&quot;:&quot;UF&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datanascimento.date&quot;,&quot;title&quot;:&quot;Date (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_NASCIMENTO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datanascimento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datanascimento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Pessoa Física" guiX="408" guiY="49" id="PESSOA_FISICA1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="220" guiY="49" id="TRATAMENT9" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_PESSOA_FISIC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_PESSOA_FISIC,null);
+	$out.0.COD_PESSOA_FISIC = formatString($in.0.COD_PESSOA_FISIC,null);
+	$out.0.NOM_PESSOA_FISIC = formatString($in.0.NOM_PESSOA_FISIC,null);
+	$out.0.ID_FEDERAL = formatString($in.0.ID_FEDERAL,null);
+	$out.0.PAIS = formatString($in.0.PAIS,null);
+	$out.0.UF = formatString($in.0.UF,null);
+	$out.0.CIDADE = formatString($in.0.CIDADE,null);
+	$out.0.COD_CARTEIRA_IDENTIDADE = formatString($in.0.COD_CARTEIRA_IDENTIDADE,null);
+	$out.0.COD_ORGAO_EMISSOR = formatString($in.0.COD_ORGAO_EMISSOR,null);
+	$out.0.DATA_NASCIMENTO = formatDate($in.0.DATA_NASCIMENTO);
+	$out.0.GRAU_INSTRUCAO = formatString($in.0.GRAU_INSTRUCAO,null);
+	$out.0.SEXO = formatString($in.0.SEXO,null);
+	$out.0.ESTADO_CIVIL = formatString($in.0.ESTADO_CIVIL,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="PESSOA_FISICA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge28" inPort="Port 0 (in)" metadata="Metadata11" outPort="Port 0 (output)" toNode="TRATAMENT9:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT9:0" guiBendpoints="" guiRouter="Manhattan" id="Edge29" inPort="Port 0 (in)" metadata="Metadata12" outPort="Port 0 (out)" toNode="PESSOA_FISICA1:0"/>
+</Phase>
+</Graph>

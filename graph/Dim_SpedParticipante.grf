@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 17:18:37 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata23" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#sped_participan.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#sped_participan.csv" name="sped_participan_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#sped_participan.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="MATRICULA_ESOCIAL" type="string"/>
+<Field name="TIPO_PARTICIPANTE" type="string"/>
+<Field eofAsDelimiter="false" name="COD_CATEG_TRABALHADOR" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET SPED PARTICIPANTE (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="15" y="15"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#sped_participan.csv" guiName="Sped Participante" guiX="32" guiY="48" id="SPED_PARTICIPANTE" type="DATA_READER"/>
+<Node dataset="dataset.spedparticipante" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.spedparticipante&quot;,&quot;datasetTitle&quot;:&quot;Sped Participante&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.spedparticipante.codigocategoriatrabalhadorsped&quot;,&quot;title&quot;:&quot;Código Categoria Trabalhador Sped&quot;,&quot;prettyId&quot;:&quot;attr_spedparticipante_codigocategoriatrabalhadorsped&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.codigocategoriatrabalhadorsped&quot;,&quot;title&quot;:&quot;Código Categoria Trabalhador Sped&quot;,&quot;prettyId&quot;:&quot;codigocategoriatrabalhadorsped&quot;,&quot;assignedMetadataField&quot;:&quot;COD_CATEG_TRABALHADOR&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.spedparticipante.matriculaesocialsped&quot;,&quot;title&quot;:&quot;Matrícula E-Social Sped&quot;,&quot;prettyId&quot;:&quot;attr_spedparticipante_matriculaesocialsped&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.matriculaesocialsped&quot;,&quot;title&quot;:&quot;Matrícula E-Social Sped&quot;,&quot;prettyId&quot;:&quot;matriculaesocialsped&quot;,&quot;assignedMetadataField&quot;:&quot;MATRICULA_ESOCIAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.spedparticipante.pksped&quot;,&quot;title&quot;:&quot;PK Sped&quot;,&quot;prettyId&quot;:&quot;attr_spedparticipante_pksped&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.pksped&quot;,&quot;title&quot;:&quot;PK Sped&quot;,&quot;prettyId&quot;:&quot;pksped&quot;,&quot;assignedMetadataField&quot;:&quot;PK_FUNCIONARIO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.spedparticipante.tipoparticipantesped&quot;,&quot;title&quot;:&quot;Tipo Participante Sped&quot;,&quot;prettyId&quot;:&quot;attr_spedparticipante_tipoparticipantesped&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.tipoparticipantesped&quot;,&quot;title&quot;:&quot;Tipo Participante Sped&quot;,&quot;prettyId&quot;:&quot;tipoparticipantesped&quot;,&quot;assignedMetadataField&quot;:&quot;TIPO_PARTICIPANTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Sped Participante" guiX="405" guiY="48" id="SPED_PARTICIPANTE1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="225" guiY="48" id="TRATAMENT15" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_FUNCIONARIO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNCIONARIO,null);
+	$out.0.MATRICULA_ESOCIAL = formatString($in.0.MATRICULA_ESOCIAL,null);
+	$out.0.TIPO_PARTICIPANTE = formatString($in.0.TIPO_PARTICIPANTE,null);
+	$out.0.COD_CATEG_TRABALHADOR = formatString($in.0.COD_CATEG_TRABALHADOR,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="SPED_PARTICIPANTE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge56" inPort="Port 0 (in)" metadata="Metadata23" outPort="Port 0 (output)" toNode="TRATAMENT15:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT15:0" guiBendpoints="" guiRouter="Manhattan" id="Edge57" inPort="Port 0 (in)" metadata="Metadata23" outPort="Port 0 (out)" toNode="SPED_PARTICIPANTE1:0"/>
+</Phase>
+</Graph>

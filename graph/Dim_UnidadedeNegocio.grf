@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Mon Jul 08 10:31:13 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata4" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#func_unid_negoc.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#func_unid_negoc.csv" name="func_unid_negoc_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#func_unid_negoc.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="COD_UNIDADE_NEGOC" type="string"/>
+<Field eofAsDelimiter="false" name="DESC_UNIDADE_NEGOCIO" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET UNIDADE DE NEGÓCIO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="14" y="20"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node enabled="enabled" guiName="Tratament" guiX="240" guiY="51" id="TRATAMENT5" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_FUNC_UNID_NEGOC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_UNID_NEGOC,null);
+	$out.0.COD_UNIDADE_NEGOC = formatString($in.0.COD_UNIDADE_NEGOC,null);
+	$out.0.DESC_UNIDADE_NEGOCIO = formatString($in.0.DESC_UNIDADE_NEGOCIO,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#func_unid_negoc.csv" guiName="Unidade de Negócio" guiX="33" guiY="51" id="UNIDADE_DE_NEGOCIO" type="DATA_READER"/>
+<Node dataset="dataset.unidadedenegocio" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.unidadedenegocio&quot;,&quot;datasetTitle&quot;:&quot;Unidade de Negócio&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedenegocio.codigounidadenegocio&quot;,&quot;title&quot;:&quot;Código Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_unidadedenegocio_codigounidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.codigounidadenegocio&quot;,&quot;title&quot;:&quot;Código Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;codigounidadenegocio&quot;,&quot;assignedMetadataField&quot;:&quot;COD_UNIDADE_NEGOC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedenegocio.descricaounidadenegocio&quot;,&quot;title&quot;:&quot;Descrição Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_unidadedenegocio_descricaounidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.descricaounidadenegocio&quot;,&quot;title&quot;:&quot;Descrição Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;descricaounidadenegocio&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_UNIDADE_NEGOCIO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_unidadedenegocio_pkunidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;pkunidadenegocio&quot;,&quot;assignedMetadataField&quot;:&quot;PK_FUNC_UNID_NEGOC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Unidade de Negócio" guiX="427" guiY="51" id="UNIDADE_DE_NEGOCIO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Edge debugMode="true" fromNode="TRATAMENT5:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (out)" toNode="UNIDADE_DE_NEGOCIO1:0"/>
+<Edge debugMode="true" fromNode="UNIDADE_DE_NEGOCIO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata4" outPort="Port 0 (output)" toNode="TRATAMENT5:0"/>
+</Phase>
+</Graph>

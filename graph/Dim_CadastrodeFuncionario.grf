@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 11:29:30 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata28" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#funcionario.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#funcionario.csv" name="funcionario_input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="PK_ESTAB" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="PK_FUNC_CATEG_SAL" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="PK_TURNO_TURMA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="PK_DEPENDENTE" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="PK_HISTOR_FUNC_UNID_NEGOC" type="string"/>
+<Field name="MATRICULA" type="string"/>
+<Field name="NOME" type="string"/>
+<Field name="DATA_ADMISSAO" type="string"/>
+<Field name="DATA_ADMISSAO_TRANSFER" type="string"/>
+<Field name="DATA_DESLIGAMENTO" type="string"/>
+<Field name="COD_SINDICATO" type="string"/>
+<Field name="SALARIO_ATUAL" type="string"/>
+<Field name="SINDICALIZADO" type="string"/>
+<Field name="RECEBE_INSALUB" type="string"/>
+<Field name="NIVEL_INSAL" type="string"/>
+<Field name="DESCRICAO_TIPO_MAO_OBRA" type="string"/>
+<Field name="COD_CARGO_BASICO" type="string"/>
+<Field name="COD_PESSOA_FISICA" type="string"/>
+<Field name="PCD" type="string"/>
+<Field name="QUANTIDADE_PADRAO_HORA_TURNO" type="string"/>
+<Field name="TIPO_FUNCIONARIO" type="string"/>
+<Field name="COD_DEFICIENCIA" type="string"/>
+<Field name="DESC_DEFICIENCIA" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_CORTE" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET CADASTRO DE FUNCIONÁRIO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="611" x="13" y="17"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#funcionario.csv" guiName="Cadastro de Funcionário" guiX="29" guiY="50" id="CADASTRO_DE_FUNCIONARIO" type="DATA_READER"/>
+<Node dataset="dataset.cadastrodefuncionario" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.cadastrodefuncionario&quot;,&quot;datasetTitle&quot;:&quot;Cadastro de Funcionário&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.codigodeficienciafuncionario&quot;,&quot;title&quot;:&quot;Código Deficiência Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_codigodeficienciafuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.codigodeficienciafuncionario&quot;,&quot;title&quot;:&quot;Código Deficiência Funcionário&quot;,&quot;prettyId&quot;:&quot;codigodeficienciafuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;COD_DEFICIENCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.descricaodeficienciafuncionario&quot;,&quot;title&quot;:&quot;Descrição Deficiência Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_descricaodeficienciafuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.descricaodeficienciafuncionario&quot;,&quot;title&quot;:&quot;Descrição Deficiência Funcionário&quot;,&quot;prettyId&quot;:&quot;descricaodeficienciafuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_DEFICIENCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.matriculafuncionario&quot;,&quot;title&quot;:&quot;Matrícula Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_matriculafuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.matriculafuncionario&quot;,&quot;title&quot;:&quot;Matrícula Funcionário&quot;,&quot;prettyId&quot;:&quot;matriculafuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;MATRICULA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.nivelinsalubridadefuncionario&quot;,&quot;title&quot;:&quot;Nível Insalubridade Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_nivelinsalubridadefuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.nivelinsalubridadefuncionario&quot;,&quot;title&quot;:&quot;Nível Insalubridade Funcionário&quot;,&quot;prettyId&quot;:&quot;nivelinsalubridadefuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;NIVEL_INSAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.nomefuncionario&quot;,&quot;title&quot;:&quot;Nome Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_nomefuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.nomefuncionario&quot;,&quot;title&quot;:&quot;Nome Funcionário&quot;,&quot;prettyId&quot;:&quot;nomefuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;NOME&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.pcdfuncionario&quot;,&quot;title&quot;:&quot;PCD Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_pcdfuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pcdfuncionario&quot;,&quot;title&quot;:&quot;PCD Funcionário&quot;,&quot;prettyId&quot;:&quot;pcdfuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;PCD&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_pkfuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;pkfuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;PK_FUNCIONARIO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.recebeinsalubridadefuncionario&quot;,&quot;title&quot;:&quot;Recebe Insalubridade Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_recebeinsalubridadefuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.recebeinsalubridadefuncionario&quot;,&quot;title&quot;:&quot;Recebe Insalubridade Funcionário&quot;,&quot;prettyId&quot;:&quot;recebeinsalubridadefuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;RECEBE_INSALUB&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.sindicalizadofuncionario&quot;,&quot;title&quot;:&quot;Sindicalizado Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_sindicalizadofuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.sindicalizadofuncionario&quot;,&quot;title&quot;:&quot;Sindicalizado Funcionário&quot;,&quot;prettyId&quot;:&quot;sindicalizadofuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;SINDICALIZADO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.tipofuncionario&quot;,&quot;title&quot;:&quot;Tipo Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_tipofuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.tipofuncionario&quot;,&quot;title&quot;:&quot;Tipo Funcionário&quot;,&quot;prettyId&quot;:&quot;tipofuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;TIPO_FUNCIONARIO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.tipomaodeobrafuncionario&quot;,&quot;title&quot;:&quot;Tipo Mão de Obra Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_tipomaodeobrafuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.tipomaodeobrafuncionario&quot;,&quot;title&quot;:&quot;Tipo Mão de Obra Funcionário&quot;,&quot;prettyId&quot;:&quot;tipomaodeobrafuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;DESCRICAO_TIPO_MAO_OBRA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[]}}" enabled="enabled" guiName="Cadastro de Funcionário" guiX="437" guiY="50" id="CADASTRO_DE_FUNCIONARIO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="258" guiY="50" id="TRATAMENT19" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_FUNCIONARIO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNCIONARIO,null);
+	$out.0.MATRICULA = formatString($in.0.MATRICULA,null);
+	$out.0.NOME = formatString($in.0.NOME,null);
+	$out.0.SINDICALIZADO = formatString($in.0.SINDICALIZADO,null);
+	$out.0.RECEBE_INSALUB = formatString($in.0.RECEBE_INSALUB,null);
+	$out.0.NIVEL_INSAL = formatString($in.0.NIVEL_INSAL,null);
+	$out.0.DESCRICAO_TIPO_MAO_OBRA = formatString($in.0.DESCRICAO_TIPO_MAO_OBRA,null);
+	$out.0.PCD = formatString($in.0.PCD,null);
+	$out.0.TIPO_FUNCIONARIO = formatString($in.0.TIPO_FUNCIONARIO,null);
+	$out.0.COD_DEFICIENCIA = formatString($in.0.COD_DEFICIENCIA,null);
+	$out.0.DESC_DEFICIENCIA = formatString($in.0.DESC_DEFICIENCIA,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="CADASTRO_DE_FUNCIONARIO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge71" inPort="Port 0 (in)" metadata="Metadata28" outPort="Port 0 (output)" toNode="TRATAMENT19:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT19:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata28" outPort="Port 0 (out)" toNode="CADASTRO_DE_FUNCIONARIO1:0"/>
+</Phase>
+</Graph>

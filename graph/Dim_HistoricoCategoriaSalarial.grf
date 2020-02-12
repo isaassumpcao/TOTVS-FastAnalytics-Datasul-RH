@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 11:59:53 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata21" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_categ_sal.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_categ_sal.csv" name="historico_func_categ_sal_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_categ_sal.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="COD_CATEGSAL" type="string"/>
+<Field name="DESC_CATEGORIA_SALARIAL" type="string"/>
+<Field name="DATA_INICIO_LOTACAO_CATEG" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_FIM_LOTACAO_CATEG" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata22" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_categ_sal.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_categ_sal.csv" name="historico_func_categ_sal_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_categ_sal.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="COD_CATEGSAL" type="string"/>
+<Field name="DESC_CATEGORIA_SALARIAL" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_INICIO_LOTACAO_CATEG" type="date"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_FIM_LOTACAO_CATEG" type="date"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET HISTÓRICO CATEGORIA SALARIAL (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="653" x="16" y="16"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node dataset="dataset.historicocategoriasalarial" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.historicocategoriasalarial&quot;,&quot;datasetTitle&quot;:&quot;Histórico Categoria Salarial&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocategoriasalarial.codigohistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;Código Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_historicocategoriasalarial_codigohistoricocategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.codigohistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;Código Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;codigohistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:&quot;COD_CATEGSAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocategoriasalarial.descricaohistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;Descrição Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_historicocategoriasalarial_descricaohistoricocategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.descricaohistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;Descrição Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;descricaohistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_CATEGORIA_SALARIAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_historicocategoriasalarial_pkhistoricocategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;pkhistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:&quot;PK_HIST_CATEG_SAL&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafim.date&quot;,&quot;title&quot;:&quot;Date (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_FIM_LOTACAO_CATEG&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datainicio.date&quot;,&quot;title&quot;:&quot;Date (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_INICIO_LOTACAO_CATEG&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Histórico Categoria Salarial" guiX="456" guiY="47" id="HISTORICO_CATEGORIA_SALARIAL" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#historico_func_categ_sal.csv" guiName="Histórico Categoria Salarial" guiX="34" guiY="47" id="HISTORICO_CATEGORIA_SALARIAL1" type="DATA_READER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="277" guiY="47" id="TRATAMENT14" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_HIST_CATEG_SAL = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CATEG_SAL,null);
+	$out.0.COD_CATEGSAL = formatString($in.0.COD_CATEGSAL,null);
+	$out.0.DESC_CATEGORIA_SALARIAL = formatString($in.0.DESC_CATEGORIA_SALARIAL,null);
+	$out.0.DATA_INICIO_LOTACAO_CATEG = formatDate($in.0.DATA_INICIO_LOTACAO_CATEG);
+	$out.0.DATA_FIM_LOTACAO_CATEG = formatDate($in.0.DATA_FIM_LOTACAO_CATEG);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="HISTORICO_CATEGORIA_SALARIAL1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge53" inPort="Port 0 (in)" metadata="Metadata21" outPort="Port 0 (output)" toNode="TRATAMENT14:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT14:0" guiBendpoints="" guiRouter="Manhattan" id="Edge54" inPort="Port 0 (in)" metadata="Metadata22" outPort="Port 0 (out)" toNode="HISTORICO_CATEGORIA_SALARIAL:0"/>
+</Phase>
+</Graph>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226761753" licenseType="Commercial" modified="Wed Jul 10 16:27:01 BRT 2019" modifiedBy="elisangela.madeira" name="FATO_FUNCIONARIO" revision="1.18" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata5" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="_2Dates" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="Min_Date" type="date"/>
+<Field name="Max_Date" type="date"/>
+<Field name="Instancia" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#funcionario.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#funcionario.csv" name="funcionario_input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="PK_ESTAB" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="PK_FUNC_CATEG_SAL" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="PK_TURNO_TURMA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="PK_SPED" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="PK_HISTOR_FUNC_UNID_NEGOC" type="string"/>
+<Field name="MATRICULA" type="string"/>
+<Field name="NOME" type="string"/>
+<Field name="DATA_ADMISSAO" type="string"/>
+<Field name="DATA_ADMISSAO_TRANSFER" type="string"/>
+<Field name="DATA_DESLIGAMENTO" type="string"/>
+<Field name="COD_SINDICATO" type="string"/>
+<Field name="SALARIO_ATUAL" type="string"/>
+<Field name="SINDICALIZADO" type="string"/>
+<Field name="RECEBE_INSALUB" type="string"/>
+<Field name="NIVEL_INSAL" type="string"/>
+<Field name="DESCRICAO_TIPO_MAO_OBRA" type="string"/>
+<Field name="COD_CARGO_BASICO" type="string"/>
+<Field name="COD_PESSOA_FISICA" type="string"/>
+<Field name="PCD" type="string"/>
+<Field name="QUANTIDADE_PADRAO_HORA_TURNO" type="string"/>
+<Field name="TIPO_FUNCIONARIO" type="string"/>
+<Field name="COD_DEFICIENCIA" type="string"/>
+<Field name="DESC_DEFICIENCIA" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_CORTE" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#funcionario.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#funcionario.csv" name="funcionario_output" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="PK_ESTAB" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="PK_FUNC_CATEG_SAL" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="PK_TURNO_TURMA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="PK_SPED" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="PK_HISTOR_FUNC_UNID_NEGOC" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_ADMISSAO" type="date"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_ADMISSAO_TRANSFER" type="date"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_DESLIGAMENTO" type="date"/>
+<Field name="COD_SINDICATO" type="string"/>
+<Field name="SALARIO_ATUAL" type="decimal"/>
+<Field name="COD_CARGO_BASICO" type="string"/>
+<Field name="COD_PESSOA_FISICA" type="string"/>
+<Field name="QUANTIDADE_PADRAO_HORA_TURNO" type="decimal"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_CORTE" type="date"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_FUNCIONARIO" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata4" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="sintax" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="syntax_content" nullable="true" shift="0" size="0" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="132" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. LEITURA / TRATAMENTO DOS DADOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="860" x="-94" y="-128"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="160" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="2. REMOVER DADOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="795" y="-156">
+<attr name="text"><![CDATA[Realiza a remoção dos dados duplicados do ambiente, de acordo com o método de carga (Full Load / Incremental).]]></attr>
+</Note>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="160" id="Note3" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="3. REMOVER DADOS (MONTHS_TO_LOAD)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="795" y="23">
+<attr name="text"><![CDATA[Apaga os dados históricos do workspace do GoodData, caso estes sejam muito antigos, garantindo assim a eficiência na geração de relatórios da plataforma.]]></attr>
+</Note>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="117" id="Note2" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="3. CARGA DO DATASET DE CONTAS A RECEBER (FATO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="795" y="204"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node enabled="enabled" guiName="ExtFilter" guiX="308" guiY="-96" id="EXT_FILTER1" type="EXT_FILTER">
+<attr name="filterExpression"><![CDATA[//#CTL2
+$in.0.INSTANCIA <> null]]></attr>
+</Node>
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#funcionario.csv" guiName="Funcionário Transferido" guiX="-85" guiY="-96" id="FUNCIONARIO_TRANSFERIDO" type="DATA_READER"/>
+<Node enabled="enabled" guiName="MONTHS_TO_LOAD Filter" guiX="105" guiY="-96" id="MONTHS_TO_LOAD_FILTER" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	date GOODDATA_MINDATE = str2date('${GOODDATA_MINDATE}', 'yyyy-MM-dd');
+	date GOODDATA_MAXDATE = str2date('${GOODDATA_MAXDATE}', 'yyyy-MM-dd');
+	date data;
+	
+	long MONTHS_TO_LOAD = str2long('${MONTHS_TO_LOAD}');
+	string THIS_MONTH = right(left(date2str(today(), 'dd/MM/yyyy'), 5), 2);
+	string THIS_YEAR = right(date2str(today(), 'dd/MM/yyyy'), 4);
+	date ETL_MAXDATE = dateAdd(str2date('01/' + THIS_MONTH + '/' + THIS_YEAR, 'dd/MM/yyyy'), -1*MONTHS_TO_LOAD, month);
+	
+	if(($in.0.DATA_CORTE == null) or (trim($in.0.DATA_CORTE) == '')) {
+		$out.0.* = null;
+	} else {
+		data = str2date($in.0.DATA_CORTE, '${DATE_PATTERN}', '${DATE_LOCALE}');
+		if ((data < GOODDATA_MINDATE) || (data > GOODDATA_MAXDATE) || (data < ETL_MAXDATE)) {
+			$out.0.* = null;
+		} else {
+			$out.0.* = $in.0.*;
+		}
+	}
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="SimpleCopy" guiX="628" guiY="-96" id="SIMPLE_COPY" type="SIMPLE_COPY"/>
+<Node enabled="enabled" guiName="Tratament" guiX="466" guiY="-96" id="TRATAMENT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_EMPRESA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_EMPRESA,null);
+	$out.0.PK_ESTAB = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_ESTAB,null);
+	$out.0.PK_FUNCIONARIO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNCIONARIO,null);
+	$out.0.PK_FUNC_CATEG_SAL = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_CATEG_SAL,null);
+	$out.0.PK_FUNC_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_CCUSTO,null);
+	$out.0.PK_TURNO_TURMA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_TURNO_TURMA,null);
+	$out.0.PK_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_UNIDADE_LOTACAO,null);
+	$out.0.PK_HIST_TURNO_TURMA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_TURNO_TURMA,null);
+	$out.0.PK_HIST_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_UNIDADE_LOTACAO,null);
+	$out.0.PK_HIST_CATEG_SAL = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CATEG_SAL,null);
+	$out.0.PK_HIST_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CCUSTO,null);
+	$out.0.PK_SPED = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_SPED,null);
+	$out.0.PK_FUNC_UNID_NEGOC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_UNID_NEGOC,null);
+	$out.0.PK_HISTOR_FUNC_UNID_NEGOC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HISTOR_FUNC_UNID_NEGOC,null);
+	$out.0.DATA_ADMISSAO = formatDate($in.0.DATA_ADMISSAO);
+	$out.0.DATA_ADMISSAO_TRANSFER = formatDate($in.0.DATA_ADMISSAO_TRANSFER);
+	$out.0.DATA_DESLIGAMENTO = formatDate($in.0.DATA_DESLIGAMENTO);
+	$out.0.COD_SINDICATO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.COD_SINDICATO,null);
+	$out.0.SALARIO_ATUAL = formatDecimal($in.0.SALARIO_ATUAL);
+	$out.0.COD_CARGO_BASICO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.COD_CARGO_BASICO,null);
+	$out.0.COD_PESSOA_FISICA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.COD_PESSOA_FISICA,null);
+	$out.0.QUANTIDADE_PADRAO_HORA_TURNO = formatDecimal($in.0.QUANTIDADE_PADRAO_HORA_TURNO);
+	$out.0.DATA_CORTE = formatDate($in.0.DATA_CORTE);
+	$out.0.DATA_FUNCIONARIO = formatDate($in.0.DATA_ADMISSAO_TRANSFER);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="EXT_FILTER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (accepted)" toNode="TRATAMENT:0"/>
+<Edge debugMode="true" fromNode="FUNCIONARIO_TRANSFERIDO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="MONTHS_TO_LOAD_FILTER:0"/>
+<Edge debugMode="true" fromNode="MONTHS_TO_LOAD_FILTER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="EXT_FILTER1:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="AGGREGATE_MENOR_DATA:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:1" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 1 (out)" toNode="AGGREGATE_MENOR_DATA1:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:2" guiBendpoints="" guiRouter="Manhattan" id="Edge14" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 2 (out)" toNode="SIMPLE_COPY1:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="SIMPLE_COPY:0"/>
+</Phase>
+<Phase number="20">
+<Node enabled="enabled" guiName="Aggregate" guiX="806" guiY="-96" id="AGGREGATE_MENOR_DATA" mapping="$Min_Date:=min($DATA_CORTE);$Max_Date:=max($DATA_CORTE);$Instancia:=first($INSTANCIA);" type="AGGREGATE">
+<attr name="guiDescription"><![CDATA[OBTÉM MAIOR E MENOR DATA]]></attr>
+</Node>
+<Node enabled="enabled" guiName="MAQL DML Execute" guiX="1140" guiY="-96" id="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL" maqlInputField="syntax_content" type="MAQL_DML_EXECUTE">
+<attr name="guiDescription"><![CDATA[APAGA DADOS FATO HKL]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="973" guiY="-96" id="REFORMAT_MENOR_DATA" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	
+	string load_mode = '${LOAD_MODE_FCT}';
+	if (upperCase(load_mode) == 'INCREMENTAL') {
+        $out.0.syntax_content = 'DELETE FROM {attr.funcionariotransferido.factsof} WHERE {label.instancia.instancia} = "' + $in.0.Instancia + '" AND {datacorte.date.yyyymmdd} BETWEEN '+'"'+date2str($in.0.Min_Date, "yyyy-MM-dd")+'" AND "'+date2str($in.0.Max_Date, "yyyy-MM-dd")+'"';
+	} else {
+		$out.0.syntax_content = 'DELETE FROM {attr.funcionariotransferido.factsof}';
+	}
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+<attr name="guiDescription"><![CDATA[GERA STATEMENT DE DELETE]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="AGGREGATE_MENOR_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="REFORMAT_MENOR_DATA:0"/>
+<Edge debugMode="true" fromNode="REFORMAT_MENOR_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (input)" metadata="Metadata4" outPort="Port 0 (out)" toNode="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL:0"/>
+</Phase>
+<Phase number="30">
+<Node enabled="enabled" guiName="Aggregate" guiX="806" guiY="80" id="AGGREGATE_MENOR_DATA1" mapping="$Min_Date:=min($DATA_CORTE);$Max_Date:=max($DATA_CORTE);$Instancia:=first($INSTANCIA);" type="AGGREGATE">
+<attr name="guiDescription"><![CDATA[OBTÉM MAIOR E MENOR DATA]]></attr>
+</Node>
+<Node enabled="enabled" guiName="MAQL DML Execute" guiX="1140" guiY="80" id="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL1" maqlInputField="syntax_content" type="MAQL_DML_EXECUTE">
+<attr name="guiDescription"><![CDATA[APAGA DADOS FATO HKL]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="973" guiY="80" id="REFORMAT_MENOR_DATA1" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	long MONTHS_TO_LOAD = str2long('${MONTHS_TO_LOAD}');
+	string THIS_MONTH = right(left(date2str(today(), 'dd/MM/yyyy'), 5), 2);
+	string THIS_YEAR = right(date2str(today(), 'dd/MM/yyyy'), 4);
+	date ETL_MAXDATE = dateAdd(str2date('01/' + THIS_MONTH + '/' + THIS_YEAR, 'dd/MM/yyyy'), -1*MONTHS_TO_LOAD, month);
+	
+	$out.0.syntax_content = 'DELETE FROM {attr.funcionariotransferido.factsof} WHERE {datacorte.date.yyyymmdd} < "' + ETL_MAXDATE + '"';
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+<attr name="guiDescription"><![CDATA[GERA STATEMENT DE DELETE]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="AGGREGATE_MENOR_DATA1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge4" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="REFORMAT_MENOR_DATA1:0"/>
+<Edge debugMode="true" fromNode="REFORMAT_MENOR_DATA1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (input)" metadata="Metadata4" outPort="Port 0 (out)" toNode="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL1:0"/>
+</Phase>
+<Phase number="40">
+<Node dataset="dataset.funcionariotransferido" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.funcionariotransferido&quot;,&quot;datasetTitle&quot;:&quot;Funcionário Transferido&quot;,&quot;attributes&quot;:[],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_pkfuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNCIONARIO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;attr_cargo_pkcargo&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;cargo__pkcargo&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;COD_CARGO_BASICO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;cargo__pkcargo&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_categoriasalarial_pkcategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;categoriasalarial__pkcategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_CATEG_SAL&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;categoriasalarial__pkcategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_centrodecusto_pkcentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;centrodecusto__pkcentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_CCUSTO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;centrodecusto__pkcentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;attr_empresa_pkempresa&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;empresa__pkempresa&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_EMPRESA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;empresa__pkempresa&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;attr_estabelecimento_pkestabelecimento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;estabelecimento__pkestabelecimento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_ESTAB&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;estabelecimento__pkestabelecimento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_historicocategoriasalarial_pkhistoricocategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;historicocategoriasalarial__pkhistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_CATEG_SAL&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;historicocategoriasalarial__pkhistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_historicocentrodecusto_pkhistoricocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;historicocentrodecusto__pkhistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_CCUSTO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;historicocentrodecusto__pkhistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_pkhistoricoturnotrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;historicoturnodetrabalho__pkhistoricoturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_TURNO_TURMA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;historicoturnodetrabalho__pkhistoricoturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_pkhistoricounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;historicounidadedelotacao__pkhistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_UNIDADE_LOTACAO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;historicounidadedelotacao__pkhistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedenegocio_pkhistoricounidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;historicounidadedenegocio__pkhistoricounidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HISTOR_FUNC_UNID_NEGOC&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;historicounidadedenegocio__pkhistoricounidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.pessoafisica.pkpessoafisica&quot;,&quot;title&quot;:&quot;PK Pessoa Física&quot;,&quot;prettyId&quot;:&quot;attr_pessoafisica_pkpessoafisica&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.pkpessoafisica&quot;,&quot;title&quot;:&quot;PK Pessoa Física&quot;,&quot;prettyId&quot;:&quot;pessoafisica__pkpessoafisica&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;COD_PESSOA_FISICA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.pessoafisica.pkpessoafisica&quot;,&quot;title&quot;:&quot;PK Pessoa Física&quot;,&quot;prettyId&quot;:&quot;pessoafisica__pkpessoafisica&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.sindicato.pksindicato&quot;,&quot;title&quot;:&quot;PK Sindicato&quot;,&quot;prettyId&quot;:&quot;attr_sindicato_pksindicato&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.sindicato.pksindicato&quot;,&quot;title&quot;:&quot;PK Sindicato&quot;,&quot;prettyId&quot;:&quot;sindicato__pksindicato&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;COD_SINDICATO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.sindicato.pksindicato&quot;,&quot;title&quot;:&quot;PK Sindicato&quot;,&quot;prettyId&quot;:&quot;sindicato__pksindicato&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.spedparticipante.pksped&quot;,&quot;title&quot;:&quot;PK Sped&quot;,&quot;prettyId&quot;:&quot;attr_spedparticipante_pksped&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.pksped&quot;,&quot;title&quot;:&quot;PK Sped&quot;,&quot;prettyId&quot;:&quot;spedparticipante__pksped&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_SPED&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.spedparticipante.pksped&quot;,&quot;title&quot;:&quot;PK Sped&quot;,&quot;prettyId&quot;:&quot;spedparticipante__pksped&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_turnodetrabalho_pkturnotrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;turnodetrabalho__pkturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_TURNO_TURMA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;turnodetrabalho__pkturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_pkunidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;unidadedelotacao__pkunidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_UNIDADE_LOTACAO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;unidadedelotacao__pkunidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_unidadedenegocio_pkunidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;unidadedenegocio__pkunidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_UNID_NEGOC&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;unidadedenegocio__pkunidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;dataadmissao.date&quot;,&quot;title&quot;:&quot;Date (Data Admissão)&quot;,&quot;prettyId&quot;:&quot;dataadmissao&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_ADMISSAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;dataadmissao.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Admissão)&quot;,&quot;prettyId&quot;:&quot;dataadmissao_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;dataadmissao.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Admissão)&quot;,&quot;prettyId&quot;:&quot;dataadmissao_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datacorte.date&quot;,&quot;title&quot;:&quot;Date (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_CORTE&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datacorte.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datacorte.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datadesligamento.date&quot;,&quot;title&quot;:&quot;Date (Data Desligamento)&quot;,&quot;prettyId&quot;:&quot;datadesligamento&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_DESLIGAMENTO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datadesligamento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Desligamento)&quot;,&quot;prettyId&quot;:&quot;datadesligamento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datadesligamento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Desligamento)&quot;,&quot;prettyId&quot;:&quot;datadesligamento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafuncionario.date&quot;,&quot;title&quot;:&quot;Date (Data Funcionário)&quot;,&quot;prettyId&quot;:&quot;datafuncionario&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_FUNCIONARIO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafuncionario.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Funcionário)&quot;,&quot;prettyId&quot;:&quot;datafuncionario_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafuncionario.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Funcionário)&quot;,&quot;prettyId&quot;:&quot;datafuncionario_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datatransferencia.date&quot;,&quot;title&quot;:&quot;Date (Data Transferência)&quot;,&quot;prettyId&quot;:&quot;datatransferencia&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_ADMISSAO_TRANSFER&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datatransferencia.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Transferência)&quot;,&quot;prettyId&quot;:&quot;datatransferencia_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datatransferencia.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Transferência)&quot;,&quot;prettyId&quot;:&quot;datatransferencia_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.funcionariotransferido.horapadraoturnofuncionario&quot;,&quot;title&quot;:&quot;Hora Padrão Turno Funcionário&quot;,&quot;prettyId&quot;:&quot;horapadraoturnofuncionario&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;QUANTIDADE_PADRAO_HORA_TURNO&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.funcionariotransferido.salarioatualfuncionario&quot;,&quot;title&quot;:&quot;Salário Atual Funcionário&quot;,&quot;prettyId&quot;:&quot;salarioatualfuncionario&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;SALARIO_ATUAL&quot;}}],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[]}}" enabled="enabled" guiName="Funcionário Transferido" guiX="973" guiY="245" id="FUNCIONARIO_TRANSFERIDO1" mode="${LOAD_MODE_FCT}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="SimpleCopy" guiX="806" guiY="245" id="SIMPLE_COPY1" type="SIMPLE_COPY"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="FUNCIONARIO_TRANSFERIDO1:0"/>
+</Phase>
+</Graph>

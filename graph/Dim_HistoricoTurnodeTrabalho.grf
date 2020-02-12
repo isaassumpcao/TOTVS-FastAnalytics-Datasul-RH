@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 15:18:16 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata16" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_turno_turma_trab.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_turno_turma_trab.csv" name="historico_func_turno_turma_trab_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_turno_turma_trab.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="COD_TURNO" type="string"/>
+<Field name="DESC_TURNO" type="string"/>
+<Field name="COD_TURMA_TRABALHO" type="string"/>
+<Field name="DESC_TURMA" type="string"/>
+<Field name="DATA_INICIO_LOTACAO" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_TERMINO_LOTACAO" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata17" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_turno_turma_trab.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_turno_turma_trab.csv" name="historico_func_turno_turma_trab_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_turno_turma_trab.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="COD_TURNO" type="string"/>
+<Field name="DESC_TURNO" type="string"/>
+<Field name="COD_TURMA_TRABALHO" type="string"/>
+<Field name="DESC_TURMA" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_INICIO_LOTACAO" type="date"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_TERMINO_LOTACAO" type="date"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET HISTÓRICO TURNO DE TRABALHO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="652" x="16" y="18"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#historico_func_turno_turma_trab.csv" guiName="Histórico Turno de Trabalho" guiX="33" guiY="52" id="HISTORICO_TURNO_DE_TRABALHO" type="DATA_READER"/>
+<Node dataset="dataset.historicoturnodetrabalho" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.historicoturnodetrabalho&quot;,&quot;datasetTitle&quot;:&quot;Histórico Turno de Trabalho&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.codigohistoricoturmatrabalho&quot;,&quot;title&quot;:&quot;Código Histórico Turma Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_codigohistoricoturmatrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.codigohistoricoturmatrabalho&quot;,&quot;title&quot;:&quot;Código Histórico Turma Trabalho&quot;,&quot;prettyId&quot;:&quot;codigohistoricoturmatrabalho&quot;,&quot;assignedMetadataField&quot;:&quot;COD_TURMA_TRABALHO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.codigohistoricoturno&quot;,&quot;title&quot;:&quot;Código Histórico Turno&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_codigohistoricoturno&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.codigohistoricoturno&quot;,&quot;title&quot;:&quot;Código Histórico Turno&quot;,&quot;prettyId&quot;:&quot;codigohistoricoturno&quot;,&quot;assignedMetadataField&quot;:&quot;COD_TURNO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.descricaohistoricoturmatrabalho&quot;,&quot;title&quot;:&quot;Descrição Histórico Turma Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_descricaohistoricoturmatrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.descricaohistoricoturmatrabalho&quot;,&quot;title&quot;:&quot;Descrição Histórico Turma Trabalho&quot;,&quot;prettyId&quot;:&quot;descricaohistoricoturmatrabalho&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_TURMA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.descricaohistoricoturno&quot;,&quot;title&quot;:&quot;Descrição Histórico Turno&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_descricaohistoricoturno&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.descricaohistoricoturno&quot;,&quot;title&quot;:&quot;Descrição Histórico Turno&quot;,&quot;prettyId&quot;:&quot;descricaohistoricoturno&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_TURNO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_pkhistoricoturnotrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;pkhistoricoturnotrabalho&quot;,&quot;assignedMetadataField&quot;:&quot;PK_HIST_TURNO_TURMA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafim.date&quot;,&quot;title&quot;:&quot;Date (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_TERMINO_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datainicio.date&quot;,&quot;title&quot;:&quot;Date (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_INICIO_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Histórico Turno de Trabalho" guiX="458" guiY="52" id="HISTORICO_TURNO_DE_TRABALHO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="280" guiY="52" id="TRATAMENT12" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_HIST_TURNO_TURMA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_TURNO_TURMA,null);
+	$out.0.COD_TURNO = formatString($in.0.COD_TURNO,null);
+	$out.0.DESC_TURNO = formatString($in.0.DESC_TURNO,null);
+	$out.0.COD_TURMA_TRABALHO = formatString($in.0.COD_TURMA_TRABALHO,null);
+	$out.0.DESC_TURMA = formatString($in.0.DESC_TURMA,null);
+	$out.0.DATA_INICIO_LOTACAO = formatDate($in.0.DATA_INICIO_LOTACAO);
+	$out.0.DATA_TERMINO_LOTACAO = formatDate($in.0.DATA_TERMINO_LOTACAO);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="HISTORICO_TURNO_DE_TRABALHO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge37" inPort="Port 0 (in)" metadata="Metadata16" outPort="Port 0 (output)" toNode="TRATAMENT12:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT12:0" guiBendpoints="" guiRouter="Manhattan" id="Edge38" inPort="Port 0 (in)" metadata="Metadata17" outPort="Port 0 (out)" toNode="HISTORICO_TURNO_DE_TRABALHO1:0"/>
+</Phase>
+</Graph>

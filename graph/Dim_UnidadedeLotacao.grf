@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Mon Jul 08 10:27:21 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata7" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#func_unid_lotac.csv" name="func_unid_lotac_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="COD_PLANO_LOTACAO" type="string"/>
+<Field name="DESC_PLANO_LOTACAO" type="string"/>
+<Field name="COD_UNID_LOTAC" type="string"/>
+<Field eofAsDelimiter="false" name="DESC_UNID_LOTAC" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET UNIDADE DE LOTAÇÃO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="17" y="17"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node enabled="enabled" guiName="Tratament" guiX="243" guiY="50" id="TRATAMENT7" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_UNIDADE_LOTACAO,null);
+	$out.0.COD_PLANO_LOTACAO = formatString($in.0.COD_PLANO_LOTACAO,null);
+	$out.0.DESC_PLANO_LOTACAO = formatString($in.0.DESC_PLANO_LOTACAO,null);
+	$out.0.COD_UNID_LOTAC = formatString($in.0.COD_UNID_LOTAC,null);
+	$out.0.DESC_UNID_LOTAC = formatString($in.0.DESC_UNID_LOTAC,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#func_unid_lotac.csv" guiName="Unidade de Lotação" guiX="37" guiY="50" id="UNIDADE_DE_LOTACAO" type="DATA_READER"/>
+<Node dataset="dataset.unidadedelotacao" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.unidadedelotacao&quot;,&quot;datasetTitle&quot;:&quot;Unidade de Lotação&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.codigoplanolotacao&quot;,&quot;title&quot;:&quot;Código Plano Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_codigoplanolotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.codigoplanolotacao&quot;,&quot;title&quot;:&quot;Código Plano Lotação&quot;,&quot;prettyId&quot;:&quot;codigoplanolotacao&quot;,&quot;assignedMetadataField&quot;:&quot;COD_PLANO_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.codigounidadelotacao&quot;,&quot;title&quot;:&quot;Código Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_codigounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.codigounidadelotacao&quot;,&quot;title&quot;:&quot;Código Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;codigounidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;COD_UNID_LOTAC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.descricaoplanolotacao&quot;,&quot;title&quot;:&quot;Descrição Plano Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_descricaoplanolotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.descricaoplanolotacao&quot;,&quot;title&quot;:&quot;Descrição Plano Lotação&quot;,&quot;prettyId&quot;:&quot;descricaoplanolotacao&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_PLANO_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.descricaounidadelotacao&quot;,&quot;title&quot;:&quot;Descrição Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_descricaounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.descricaounidadelotacao&quot;,&quot;title&quot;:&quot;Descrição Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;descricaounidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_UNID_LOTAC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_pkunidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;pkunidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;PK_UNIDADE_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[]}}" enabled="enabled" guiName="Unidade de Lotação" guiX="431" guiY="50" id="UNIDADE_DE_LOTACAO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Edge debugMode="true" fromNode="TRATAMENT7:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata7" outPort="Port 0 (out)" toNode="UNIDADE_DE_LOTACAO1:0"/>
+<Edge debugMode="true" fromNode="UNIDADE_DE_LOTACAO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge21" inPort="Port 0 (in)" metadata="Metadata7" outPort="Port 0 (output)" toNode="TRATAMENT7:0"/>
+</Phase>
+</Graph>

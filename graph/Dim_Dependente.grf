@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 11:36:16 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata13" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#dependente.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#dependente.csv" name="dependente_input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_DEPENDENTE" type="string"/>
+<Field name="COD_DEPENDENTE" type="string"/>
+<Field name="NOME_DEPENDENTE" type="string"/>
+<Field name="SEXO" type="string"/>
+<Field name="QUANTIDADE_DEP" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_NASCIMENTO" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata14" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#dependente.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#dependente.csv" name="dependente_output" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_DEPENDENTE" type="string"/>
+<Field name="COD_DEPENDENTE" type="string"/>
+<Field name="NOME_DEPENDENTE" type="string"/>
+<Field name="SEXO" type="string"/>
+<Field name="QUANTIDADE_DEP" type="decimal"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_NASCIMENTO" type="date"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET DEPENDENTE (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="543" x="16" y="14"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#dependente.csv" guiName="Dependente" guiX="35" guiY="47" id="DEPENDENTE" type="DATA_READER"/>
+<Node dataset="dataset.dependente" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.dependente&quot;,&quot;datasetTitle&quot;:&quot;Dependente&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.dependente.codigodependente&quot;,&quot;title&quot;:&quot;Código Dependente&quot;,&quot;prettyId&quot;:&quot;attr_dependente_codigodependente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.dependente.codigodependente&quot;,&quot;title&quot;:&quot;Código Dependente&quot;,&quot;prettyId&quot;:&quot;codigodependente&quot;,&quot;assignedMetadataField&quot;:&quot;COD_DEPENDENTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.dependente.nomedependente&quot;,&quot;title&quot;:&quot;Nome Dependente&quot;,&quot;prettyId&quot;:&quot;attr_dependente_nomedependente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.dependente.nomedependente&quot;,&quot;title&quot;:&quot;Nome Dependente&quot;,&quot;prettyId&quot;:&quot;nomedependente&quot;,&quot;assignedMetadataField&quot;:&quot;NOME_DEPENDENTE&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.dependente.sexodependente&quot;,&quot;title&quot;:&quot;Sexo Dependente&quot;,&quot;prettyId&quot;:&quot;attr_dependente_sexodependente&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.dependente.sexodependente&quot;,&quot;title&quot;:&quot;Sexo Dependente&quot;,&quot;prettyId&quot;:&quot;sexodependente&quot;,&quot;assignedMetadataField&quot;:&quot;SEXO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_pkfuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_DEPENDENTE&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datanascimento.date&quot;,&quot;title&quot;:&quot;Date (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_NASCIMENTO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datanascimento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datanascimento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Nascimento)&quot;,&quot;prettyId&quot;:&quot;datanascimento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.dependente.quantidadedependente&quot;,&quot;title&quot;:&quot;Quantidade Dependente&quot;,&quot;prettyId&quot;:&quot;quantidadedependente&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;QUANTIDADE_DEP&quot;}}],&quot;dateFacts&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[]}}" enabled="enabled" guiName="Dependente" guiX="398" guiY="47" id="DEPENDENTE1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="218" guiY="47" id="TRATAMENT10" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_DEPENDENTE = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_DEPENDENTE,null);
+	$out.0.COD_DEPENDENTE = formatString($in.0.COD_DEPENDENTE,null);
+	$out.0.NOME_DEPENDENTE = formatString($in.0.NOME_DEPENDENTE,null);
+	$out.0.SEXO = formatString($in.0.SEXO,null);
+	$out.0.QUANTIDADE_DEP = formatDecimal($in.0.QUANTIDADE_DEP);
+	$out.0.DATA_NASCIMENTO = formatDate($in.0.DATA_NASCIMENTO);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="DEPENDENTE:0" guiBendpoints="" guiRouter="Manhattan" id="Edge31" inPort="Port 0 (in)" metadata="Metadata13" outPort="Port 0 (output)" toNode="TRATAMENT10:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT10:0" guiBendpoints="" guiRouter="Manhattan" id="Edge32" inPort="Port 0 (in)" metadata="Metadata14" outPort="Port 0 (out)" toNode="DEPENDENTE1:0"/>
+</Phase>
+</Graph>

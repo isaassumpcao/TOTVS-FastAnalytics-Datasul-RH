@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 16:08:13 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata9" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_unid_lotac.csv" name="historico_func_unid_lotac_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="COD_PLANO_LOTACAO" type="string"/>
+<Field name="DESC_PLANO_LOTACAO" type="string"/>
+<Field name="DATA_INICIO_VALIDADE" type="string"/>
+<Field name="COD_UNID_LOTACAO" type="string"/>
+<Field name="DESC_UNID_LOTAC" type="string"/>
+<Field name="DATA_INICIO_LOTACAO" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_FIM_LOTACAO" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata10" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_unid_lotac.csv" name="historico_func_unid_lotac_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_unid_lotac.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="COD_PLANO_LOTACAO" type="string"/>
+<Field name="DESC_PLANO_LOTACAO" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_INICIO_VALIDADE" type="date"/>
+<Field name="COD_UNID_LOTACAO" type="string"/>
+<Field name="DESC_UNID_LOTAC" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_INICIO_LOTACAO" type="date"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_FIM_LOTACAO" type="date"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET HISTÓRICO UNIDADE DE LOTAÇÃO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="685" x="16" y="18"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#historico_func_unid_lotac.csv" guiName="Histórico Unidade de Lotação" guiX="36" guiY="51" id="HISTORICO_UNIDADE_DE_LOTACAO" type="DATA_READER"/>
+<Node dataset="dataset.historicounidadedelotacao" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.historicounidadedelotacao&quot;,&quot;datasetTitle&quot;:&quot;Histórico Unidade de Lotação&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.codigohistoricoplanolotacao&quot;,&quot;title&quot;:&quot;Código Histórico Plano Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_codigohistoricoplanolotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.codigohistoricoplanolotacao&quot;,&quot;title&quot;:&quot;Código Histórico Plano Lotação&quot;,&quot;prettyId&quot;:&quot;codigohistoricoplanolotacao&quot;,&quot;assignedMetadataField&quot;:&quot;COD_PLANO_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.codigohistoricounidadelotacao&quot;,&quot;title&quot;:&quot;Código Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_codigohistoricounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.codigohistoricounidadelotacao&quot;,&quot;title&quot;:&quot;Código Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;codigohistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;COD_UNID_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.descricaohistoricoplanolotacao&quot;,&quot;title&quot;:&quot;Descrição Histórico Plano Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_descricaohistoricoplanolotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.descricaohistoricoplanolotacao&quot;,&quot;title&quot;:&quot;Descrição Histórico Plano Lotação&quot;,&quot;prettyId&quot;:&quot;descricaohistoricoplanolotacao&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_PLANO_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.descricaohistoricounidadelotacao&quot;,&quot;title&quot;:&quot;Descrição Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_descricaohistoricounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.descricaohistoricounidadelotacao&quot;,&quot;title&quot;:&quot;Descrição Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;descricaohistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_UNID_LOTAC&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_pkhistoricounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;pkhistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;PK_HIST_UNIDADE_LOTACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafim.date&quot;,&quot;title&quot;:&quot;Date (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_FIM_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datainicio.date&quot;,&quot;title&quot;:&quot;Date (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_INICIO_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datavalidadeunidadelotacao.date&quot;,&quot;title&quot;:&quot;Date (Data Validade Unidade Lotação)&quot;,&quot;prettyId&quot;:&quot;datavalidadeunidadelotacao&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_INICIO_VALIDADE&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datavalidadeunidadelotacao.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Validade Unidade Lotação)&quot;,&quot;prettyId&quot;:&quot;datavalidadeunidadelotacao_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datavalidadeunidadelotacao.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Validade Unidade Lotação)&quot;,&quot;prettyId&quot;:&quot;datavalidadeunidadelotacao_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Histórico Unidade de Lotação" guiX="482" guiY="51" id="HISTORICO_UNIDADE_DE_LOTACAO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="294" guiY="51" id="TRATAMENT8" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_HIST_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_UNIDADE_LOTACAO,null);
+	$out.0.COD_PLANO_LOTACAO = formatString($in.0.COD_PLANO_LOTACAO,null);
+	$out.0.DESC_PLANO_LOTACAO = formatString($in.0.DESC_PLANO_LOTACAO,null);
+	$out.0.DATA_INICIO_VALIDADE = formatDate($in.0.DATA_INICIO_VALIDADE);
+	$out.0.COD_UNID_LOTACAO = formatString($in.0.COD_UNID_LOTACAO,null);
+	$out.0.DESC_UNID_LOTAC = formatString($in.0.DESC_UNID_LOTAC,null);
+	$out.0.DATA_INICIO_LOTACAO = formatDate($in.0.DATA_INICIO_LOTACAO);
+	$out.0.DATA_FIM_LOTACAO = formatDate($in.0.DATA_FIM_LOTACAO);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="HISTORICO_UNIDADE_DE_LOTACAO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge24" inPort="Port 0 (in)" metadata="Metadata9" outPort="Port 0 (output)" toNode="TRATAMENT8:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT8:0" guiBendpoints="" guiRouter="Manhattan" id="Edge25" inPort="Port 0 (in)" metadata="Metadata10" outPort="Port 0 (out)" toNode="HISTORICO_UNIDADE_DE_LOTACAO1:0"/>
+</Phase>
+</Graph>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="fernando.miranda" created="Fri Mar 10 08:54:07 BRT 2017" guiVersion="3.4.4.P" id="1489159601933" licenseType="Commercial" modified="Thu Jul 11 17:29:59 BRT 2019" modifiedBy="elisangela.madeira" name="ETL_FATOS" revision="1.179" showComponentDetails="true">
+<Global>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="301" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="CARGA DAS FATOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="902" x="15" y="12"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_Afastamento.grf" guiName="Afastamento" guiX="36" guiY="58" id="AFASTAMENTO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_BancodeHoras.grf" guiName="Banco de Horas" guiX="200" guiY="58" id="BANCO_DE_HORAS" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_EnvelopedeFerias.grf" guiName="Envelope de Férias" guiX="366" guiY="58" id="ENVELOPE_DE_FERIAS" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_EnvelopedePagamento.grf" guiName="Envelope de Pagamento" guiX="542" guiY="58" id="ENVELOPE_DE_PAGAMENTO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_FuncionarioAdmitido.grf" guiName="Funcionário Admitido" guiX="747" guiY="58" id="FUNCIONARIO_ADMITIDO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_FuncionarioDesligado.grf" guiName="Funcionário Desligado" guiX="36" guiY="176" id="FUNCIONARIO_DESLIGADO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_FuncionarioTransferido.grf" guiName="Funcionário Transferido" guiX="227" guiY="176" id="FUNCIONARIO_TRANSFERIDO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_HistoricoSalarial.grf" guiName="Histórico Salarial" guiX="426" guiY="176" id="HISTORICO_SALARIAL" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_HoraExtra.grf" guiName="Hora Extra" guiX="596" guiY="176" id="HORA_EXTRA" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Fato_PontoEletronico.grf" guiName="Ponto Eletrônico" guiX="767" guiY="176" id="PONTO_ELETRONICO" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+</Phase>
+</Graph>

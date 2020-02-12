@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 17:14:35 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata27" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#sindicato.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#sindicato.csv" name="sindicato_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#sindicato.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_SINDICATO" type="string"/>
+<Field name="COD_SINDICATO" type="string"/>
+<Field eofAsDelimiter="false" name="DESC_SINDICATO" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET SINDICATO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="13" y="18"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#sindicato.csv" guiName="Sindicato" guiX="33" guiY="51" id="SINDICATO" type="DATA_READER"/>
+<Node dataset="dataset.sindicato" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.sindicato&quot;,&quot;datasetTitle&quot;:&quot;Sindicato&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.sindicato.codigosindicato&quot;,&quot;title&quot;:&quot;Código Sindicato&quot;,&quot;prettyId&quot;:&quot;attr_sindicato_codigosindicato&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.sindicato.codigosindicato&quot;,&quot;title&quot;:&quot;Código Sindicato&quot;,&quot;prettyId&quot;:&quot;codigosindicato&quot;,&quot;assignedMetadataField&quot;:&quot;COD_SINDICATO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.sindicato.descricaosindicato&quot;,&quot;title&quot;:&quot;Descrição Sindicato&quot;,&quot;prettyId&quot;:&quot;attr_sindicato_descricaosindicato&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.sindicato.descricaosindicato&quot;,&quot;title&quot;:&quot;Descrição Sindicato&quot;,&quot;prettyId&quot;:&quot;descricaosindicato&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_SINDICATO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.sindicato.pksindicato&quot;,&quot;title&quot;:&quot;PK Sindicato&quot;,&quot;prettyId&quot;:&quot;attr_sindicato_pksindicato&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.sindicato.pksindicato&quot;,&quot;title&quot;:&quot;PK Sindicato&quot;,&quot;prettyId&quot;:&quot;pksindicato&quot;,&quot;assignedMetadataField&quot;:&quot;PK_SINDICATO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Sindicato" guiX="406" guiY="51" id="SINDICATO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="226" guiY="51" id="TRATAMENT18" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_SINDICATO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_SINDICATO,null);
+	$out.0.COD_SINDICATO = formatString($in.0.COD_SINDICATO,null);
+	$out.0.DESC_SINDICATO = formatString($in.0.DESC_SINDICATO,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="SINDICATO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge65" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (output)" toNode="TRATAMENT18:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT18:0" guiBendpoints="" guiRouter="Manhattan" id="Edge66" inPort="Port 0 (in)" metadata="Metadata27" outPort="Port 0 (out)" toNode="SINDICATO1:0"/>
+</Phase>
+</Graph>

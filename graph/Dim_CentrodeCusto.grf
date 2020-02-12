@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 11:34:59 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata19" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH .zip)#func_ccusto.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH .zip)#func_ccusto.csv" name="func_ccusto_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH .zip)#func_ccusto.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="COD_CENTRO_CUSTO" type="string"/>
+<Field eofAsDelimiter="false" name="DESC_CCUSTO" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET CENTRO DE CUSTO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="13" y="15"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#func_ccusto.csv" guiName="Centro de Custo" guiX="28" guiY="48" id="CENTRO_DE_CUSTO" type="DATA_READER"/>
+<Node dataset="dataset.centrodecusto" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.centrodecusto&quot;,&quot;datasetTitle&quot;:&quot;Centro de Custo&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.centrodecusto.codigocentrocusto&quot;,&quot;title&quot;:&quot;Código Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_centrodecusto_codigocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.codigocentrocusto&quot;,&quot;title&quot;:&quot;Código Centro Custo&quot;,&quot;prettyId&quot;:&quot;codigocentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;COD_CENTRO_CUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.centrodecusto.descricaocentrocusto&quot;,&quot;title&quot;:&quot;Descrição Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_centrodecusto_descricaocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.descricaocentrocusto&quot;,&quot;title&quot;:&quot;Descrição Centro Custo&quot;,&quot;prettyId&quot;:&quot;descricaocentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_CCUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_centrodecusto_pkcentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;pkcentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;PK_FUNC_CCUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Centro de Custo" guiX="408" guiY="48" id="CENTRO_DE_CUSTO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="221" guiY="48" id="TRATAMENT3" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_FUNC_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_CCUSTO,null);
+	$out.0.COD_CENTRO_CUSTO = formatString($in.0.COD_CENTRO_CUSTO,null);
+	$out.0.DESC_CCUSTO = formatString($in.0.DESC_CCUSTO,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="CENTRO_DE_CUSTO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge47" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (output)" toNode="TRATAMENT3:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT3:0" guiBendpoints="" guiRouter="Manhattan" id="Edge48" inPort="Port 0 (in)" metadata="Metadata19" outPort="Port 0 (out)" toNode="CENTRO_DE_CUSTO1:0"/>
+</Phase>
+</Graph>

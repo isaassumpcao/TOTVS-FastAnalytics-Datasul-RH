@@ -1,0 +1,33 @@
+#(Please use slash '/' character as a path delimiter in all path specifications, e.g., C:/Users/username/workspace/project)
+
+PROJECT= .
+DATA_DIR=${PROJECT}/data
+DATA_SOURCE_DIR=${PROJECT}/data/source
+DATA_TRANSFORM_DIR=${PROJECT}/data/transform
+DATA_GOODDATA_DIR=${PROJECT}/data/gooddata
+DATA_TMP_DIR=${PROJECT}/data/tmp
+GRAPH_DIR=${PROJECT}/graph
+META_DIR=${PROJECT}/meta
+TRANS_DIR=${PROJECT}/trans
+MODEL_DIR=${PROJECT}/model
+
+
+# GoodData working project
+# GDC_PROJECT_ID identifies the GoodData working project. Transformed data will be uploaded into the datasets of the GoodData working project.
+# The data model information necessary for transformation definition is also obtained from this project.
+# You can find the ID of a project in the project context menu in Server Explorer.
+GDC_PROJECT_ID=ukb5jmj84du3hiwbiubq8g0664q5hho9
+
+DATE_PATTERN=yyyyMMdd
+DATE_LOCALE=pt.BR
+NUMBER_PATTERN=###,###,###,###.##
+NUMBER_LOCALE=eu.US
+NUMBER_MAXSIZE=10000000000
+LOAD_MODE_FCT=FULL_LOAD
+LOAD_MODE_DIM=FULL_LOAD
+GOODDATA_MINDATE=1900-01-01
+GOODDATA_MAXDATE=2050-12-31
+MONTHS_TO_LOAD=999
+USER_PWD_SECURE_DI=
+gdc_agent_zip=DataSulRH*.zip
+DEMO=N

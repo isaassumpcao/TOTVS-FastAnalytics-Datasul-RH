@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 11:54:55 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata1" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#event_fp.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#event_fp.csv" name="event_fp_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#event_fp.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EVENTO" type="string"/>
+<Field name="COD_EVENTO" type="string"/>
+<Field name="DESCRICAO_EVENTO" type="string"/>
+<Field name="IDENTIFICACAO" type="string"/>
+<Field name="TAXA_MULTIPLICACAA" type="string"/>
+<Field eofAsDelimiter="false" name="COD_EMPRESA" type="string"/>
+<Field name="UNIDADE_MEDIDA" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET EVENTO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="574" x="20" y="15"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#event_fp.csv" guiName="Evento" guiX="39" guiY="48" id="EVENTO" type="DATA_READER"/>
+<Node dataset="dataset.evento" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.evento&quot;,&quot;datasetTitle&quot;:&quot;Evento&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.codigoempresaevento&quot;,&quot;title&quot;:&quot;Código Empresa Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_codigoempresaevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.codigoempresaevento&quot;,&quot;title&quot;:&quot;Código Empresa Evento&quot;,&quot;prettyId&quot;:&quot;codigoempresaevento&quot;,&quot;assignedMetadataField&quot;:&quot;COD_EMPRESA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.codigoevento&quot;,&quot;title&quot;:&quot;Código Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_codigoevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.codigoevento&quot;,&quot;title&quot;:&quot;Código Evento&quot;,&quot;prettyId&quot;:&quot;codigoevento&quot;,&quot;assignedMetadataField&quot;:&quot;COD_EVENTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.descricaoevento&quot;,&quot;title&quot;:&quot;Descrição Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_descricaoevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.descricaoevento&quot;,&quot;title&quot;:&quot;Descrição Evento&quot;,&quot;prettyId&quot;:&quot;descricaoevento&quot;,&quot;assignedMetadataField&quot;:&quot;DESCRICAO_EVENTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.descricaounidademedidaevento&quot;,&quot;title&quot;:&quot;Descrição Unidade Medida Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_descricaounidademedidaevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.descricaounidademedidaevento&quot;,&quot;title&quot;:&quot;Descrição Unidade Medida Evento&quot;,&quot;prettyId&quot;:&quot;descricaounidademedidaevento&quot;,&quot;assignedMetadataField&quot;:&quot;UNIDADE_MEDIDA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.identificacaoevento&quot;,&quot;title&quot;:&quot;Identificação Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_identificacaoevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.identificacaoevento&quot;,&quot;title&quot;:&quot;Identificação Evento&quot;,&quot;prettyId&quot;:&quot;identificacaoevento&quot;,&quot;assignedMetadataField&quot;:&quot;IDENTIFICACAO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.pkevento&quot;,&quot;title&quot;:&quot;PK Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_pkevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.pkevento&quot;,&quot;title&quot;:&quot;PK Evento&quot;,&quot;prettyId&quot;:&quot;pkevento&quot;,&quot;assignedMetadataField&quot;:&quot;PK_EVENTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.taxamultiplicacaoevento&quot;,&quot;title&quot;:&quot;Taxa Multiplicação Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_taxamultiplicacaoevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.taxamultiplicacaoevento&quot;,&quot;title&quot;:&quot;Taxa Multiplicação Evento&quot;,&quot;prettyId&quot;:&quot;taxamultiplicacaoevento&quot;,&quot;assignedMetadataField&quot;:&quot;TAXA_MULTIPLICACAA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Evento" guiX="419" guiY="48" id="EVENTO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="232" guiY="48" id="TRATAMENT1" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_EVENTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_EVENTO,null);
+	$out.0.COD_EVENTO = formatString($in.0.COD_EVENTO,null);
+	$out.0.DESCRICAO_EVENTO = formatString($in.0.DESCRICAO_EVENTO,null);
+	$out.0.IDENTIFICACAO = formatString($in.0.IDENTIFICACAO,null);
+	$out.0.TAXA_MULTIPLICACAA = formatString($in.0.TAXA_MULTIPLICACAA,null);
+	$out.0.COD_EMPRESA = formatString($in.0.COD_EMPRESA,null);
+	$out.0.UNIDADE_MEDIDA = formatString($in.0.UNIDADE_MEDIDA,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="EVENTO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (output)" toNode="TRATAMENT1:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="EVENTO1:0"/>
+</Phase>
+</Graph>

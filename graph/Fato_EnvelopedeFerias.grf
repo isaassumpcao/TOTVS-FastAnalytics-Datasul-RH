@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226761753" licenseType="Commercial" modified="Mon Jul 08 17:00:25 BRT 2019" modifiedBy="elisangela.madeira" name="FATO_FUNCIONARIO" revision="1.6" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata5" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="_2Dates" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" type="delimited">
+<Field name="Min_Date" type="date"/>
+<Field name="Max_Date" type="date"/>
+<Field name="Instancia" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#ferias.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#ferias.csv" name="ferias_input" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="PK_ESTAB" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="PK_FUNC_CATEG_SAL" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="PK_TURNO_TURMA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="PK_HISTOR_FUNC_UNID_NEGOC" type="string"/>
+<Field name="INICIO_FERIAS" type="string"/>
+<Field name="DATA_FIM_FERIAS" type="string"/>
+<Field name="DATA_PAGAMENTO" type="string"/>
+<Field name="TIPO_CALCULO_FERIAS" type="string"/>
+<Field name="SEQUENCIA_REGISTRO" type="string"/>
+<Field name="EVENTO" type="string"/>
+<Field name="TIPO_INCIDENCIA" type="string"/>
+<Field name="DESC_INCIDENCIA" type="string"/>
+<Field name="TOTA_VALOR" type="string"/>
+<Field name="TOTAL_DIAS" type="string"/>
+<Field name="TOTAL_BASE" type="string"/>
+<Field name="VALOR_MES_INICIO" type="string"/>
+<Field name="VALOR_MES_SEG" type="string"/>
+<Field name="BASE_MES_INICIO" type="string"/>
+<Field name="BASE_MES_SEGUINTE" type="string"/>
+<Field name="VALOR_EFP_MES_INICIO" type="string"/>
+<Field name="VALOR_EFPMES_SEGUINTE" type="string"/>
+<Field name="QUANTIDADE_MES_INICIO" type="string"/>
+<Field name="QUANTIDADE_MES_SEGUINT" type="string"/>
+<Field name="INDICE_ESPEC_FERIAS" type="string"/>
+<Field name="PK_CARGO" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_CORTE" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#ferias.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#ferias.csv" name="ferias_output" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="PK_ESTAB" type="string"/>
+<Field name="PK_FUNCIONARIO" type="string"/>
+<Field name="PK_FUNC_CATEG_SAL" type="string"/>
+<Field name="PK_FUNC_CCUSTO" type="string"/>
+<Field name="PK_TURNO_TURMA" type="string"/>
+<Field name="PK_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_TURNO_TURMA" type="string"/>
+<Field name="PK_HIST_UNIDADE_LOTACAO" type="string"/>
+<Field name="PK_HIST_CATEG_SAL" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="PK_FUNC_UNID_NEGOC" type="string"/>
+<Field name="PK_HISTOR_FUNC_UNID_NEGOC" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="INICIO_FERIAS" type="date"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_FIM_FERIAS" type="date"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_PAGAMENTO" type="date"/>
+<Field name="TIPO_CALCULO_FERIAS" type="string"/>
+<Field name="SEQUENCIA_REGISTRO" type="string"/>
+<Field name="EVENTO" type="string"/>
+<Field name="TIPO_INCIDENCIA" type="string"/>
+<Field name="DESC_INCIDENCIA" type="string"/>
+<Field name="TOTA_VALOR" type="decimal"/>
+<Field name="TOTAL_DIAS" type="decimal"/>
+<Field name="TOTAL_BASE" type="decimal"/>
+<Field name="VALOR_MES_INICIO" type="decimal"/>
+<Field name="VALOR_MES_SEG" type="decimal"/>
+<Field name="BASE_MES_INICIO" type="decimal"/>
+<Field name="BASE_MES_SEGUINTE" type="decimal"/>
+<Field name="VALOR_EFP_MES_INICIO" type="decimal"/>
+<Field name="VALOR_EFPMES_SEGUINTE" type="decimal"/>
+<Field name="QUANTIDADE_MES_INICIO" type="decimal"/>
+<Field name="QUANTIDADE_MES_SEGUINT" type="decimal"/>
+<Field name="INDICE_ESPEC_FERIAS" type="string"/>
+<Field name="PK_CARGO" type="string"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_CORTE" type="date"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata4" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="|" name="sintax" previewAttachmentCharset="ISO-8859-1" recordDelimiter="\n" recordSize="-1" type="delimited">
+<Field eofAsDelimiter="false" name="syntax_content" nullable="true" shift="0" size="0" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="132" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. LEITURA / TRATAMENTO DOS DADOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="860" x="3" y="-128"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="160" id="Note1" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="2. REMOVER DADOS" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="888" y="-156">
+<attr name="text"><![CDATA[Realiza a remoção dos dados duplicados do ambiente, de acordo com o método de carga (Full Load / Incremental).]]></attr>
+</Note>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="160" id="Note3" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="3. REMOVER DADOS (MONTHS_TO_LOAD)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="888" y="26">
+<attr name="text"><![CDATA[Apaga os dados históricos do workspace do GoodData, caso estes sejam muito antigos, garantindo assim a eficiência na geração de relatórios da plataforma.]]></attr>
+</Note>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="117" id="Note2" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="3. CARGA DO DATASET DE CONTAS A RECEBER (FATO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="497" x="888" y="207"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#ferias.csv" guiName="Envelope de Férias" guiX="14" guiY="-95" id="ENVELOPE_DE_FERIAS" type="DATA_READER"/>
+<Node enabled="enabled" guiName="ExtFilter" guiX="397" guiY="-96" id="EXT_FILTER1" type="EXT_FILTER">
+<attr name="filterExpression"><![CDATA[//#CTL2
+$in.0.INSTANCIA <> null]]></attr>
+</Node>
+<Node enabled="enabled" guiName="MONTHS_TO_LOAD Filter" guiX="188" guiY="-96" id="MONTHS_TO_LOAD_FILTER" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	date GOODDATA_MINDATE = str2date('${GOODDATA_MINDATE}', 'yyyy-MM-dd');
+	date GOODDATA_MAXDATE = str2date('${GOODDATA_MAXDATE}', 'yyyy-MM-dd');
+	date data;
+	
+	long MONTHS_TO_LOAD = str2long('${MONTHS_TO_LOAD}');
+	string THIS_MONTH = right(left(date2str(today(), 'dd/MM/yyyy'), 5), 2);
+	string THIS_YEAR = right(date2str(today(), 'dd/MM/yyyy'), 4);
+	date ETL_MAXDATE = dateAdd(str2date('01/' + THIS_MONTH + '/' + THIS_YEAR, 'dd/MM/yyyy'), -1*MONTHS_TO_LOAD, month);
+	
+	if(($in.0.DATA_CORTE == null) or (trim($in.0.DATA_CORTE) == '')) {
+		$out.0.* = null;
+	} else {
+		data = str2date($in.0.DATA_CORTE, '${DATE_PATTERN}', '${DATE_LOCALE}');
+		if ((data < GOODDATA_MINDATE) || (data > GOODDATA_MAXDATE) || (data < ETL_MAXDATE)) {
+			$out.0.* = null;
+		} else {
+			$out.0.* = $in.0.*;
+		}
+	}
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="SimpleCopy" guiX="724" guiY="-96" id="SIMPLE_COPY" type="SIMPLE_COPY"/>
+<Node enabled="enabled" guiName="Tratament" guiX="561" guiY="-96" id="TRATAMENT" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_EMPRESA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_EMPRESA,null);
+	$out.0.PK_ESTAB = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_ESTAB,null);
+	$out.0.PK_FUNCIONARIO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNCIONARIO,null);
+	$out.0.PK_FUNC_CATEG_SAL = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_CATEG_SAL,null);
+	$out.0.PK_FUNC_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_CCUSTO,null);
+	$out.0.PK_TURNO_TURMA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_TURNO_TURMA,null);
+	$out.0.PK_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_UNIDADE_LOTACAO,null);
+	$out.0.PK_HIST_TURNO_TURMA = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_TURNO_TURMA,null);
+	$out.0.PK_HIST_UNIDADE_LOTACAO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_UNIDADE_LOTACAO,null);
+	$out.0.PK_HIST_CATEG_SAL = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CATEG_SAL,null);
+	$out.0.PK_HIST_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CCUSTO,null);
+	$out.0.PK_FUNC_UNID_NEGOC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_FUNC_UNID_NEGOC,null);
+	$out.0.PK_HISTOR_FUNC_UNID_NEGOC = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HISTOR_FUNC_UNID_NEGOC,null);
+	$out.0.INICIO_FERIAS = formatDate($in.0.INICIO_FERIAS);
+	$out.0.DATA_FIM_FERIAS = formatDate($in.0.DATA_FIM_FERIAS);
+	$out.0.DATA_PAGAMENTO = formatDate($in.0.DATA_PAGAMENTO);
+	$out.0.TIPO_CALCULO_FERIAS = formatString($in.0.TIPO_CALCULO_FERIAS,null);
+	$out.0.SEQUENCIA_REGISTRO = formatString($in.0.SEQUENCIA_REGISTRO,null);
+	$out.0.EVENTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.EVENTO,null);
+	$out.0.TIPO_INCIDENCIA = formatString($in.0.TIPO_INCIDENCIA,null);
+	$out.0.DESC_INCIDENCIA = formatString($in.0.DESC_INCIDENCIA,null);
+	$out.0.TOTA_VALOR = formatDecimal($in.0.TOTA_VALOR);
+	$out.0.TOTAL_DIAS = formatDecimal($in.0.TOTAL_DIAS);
+	$out.0.TOTAL_BASE = formatDecimal($in.0.TOTAL_BASE);
+	$out.0.VALOR_MES_INICIO = formatDecimal($in.0.VALOR_MES_INICIO);
+	$out.0.VALOR_MES_SEG = formatDecimal($in.0.VALOR_MES_SEG);
+	$out.0.BASE_MES_INICIO = formatDecimal($in.0.BASE_MES_INICIO);
+	$out.0.BASE_MES_SEGUINTE = formatDecimal($in.0.BASE_MES_SEGUINTE);
+	$out.0.VALOR_EFP_MES_INICIO = formatDecimal($in.0.VALOR_EFP_MES_INICIO);
+	$out.0.VALOR_EFPMES_SEGUINTE = formatDecimal($in.0.VALOR_EFPMES_SEGUINTE);
+	$out.0.QUANTIDADE_MES_INICIO = formatDecimal($in.0.QUANTIDADE_MES_INICIO);
+	$out.0.QUANTIDADE_MES_SEGUINT = formatDecimal($in.0.QUANTIDADE_MES_SEGUINT);
+	$out.0.INDICE_ESPEC_FERIAS = formatString($in.0.INDICE_ESPEC_FERIAS,null);
+	$out.0.PK_CARGO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_CARGO,null);
+	$out.0.DATA_CORTE = formatDate($in.0.DATA_CORTE);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="ENVELOPE_DE_FERIAS:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (output)" toNode="MONTHS_TO_LOAD_FILTER:0"/>
+<Edge debugMode="true" fromNode="EXT_FILTER1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge10" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (accepted)" toNode="TRATAMENT:0"/>
+<Edge debugMode="true" fromNode="MONTHS_TO_LOAD_FILTER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge9" inPort="Port 0 (in)" metadata="Metadata0" outPort="Port 0 (out)" toNode="EXT_FILTER1:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="AGGREGATE_MENOR_DATA:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:1" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 1 (out)" toNode="AGGREGATE_MENOR_DATA1:0"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY:2" guiBendpoints="" guiRouter="Manhattan" id="Edge15" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 2 (out)" toNode="SIMPLE_COPY1:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge11" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="SIMPLE_COPY:0"/>
+</Phase>
+<Phase number="20">
+<Node enabled="enabled" guiName="Aggregate" guiX="897" guiY="-95" id="AGGREGATE_MENOR_DATA" mapping="$Min_Date:=min($DATA_CORTE);$Max_Date:=max($DATA_CORTE);$Instancia:=first($INSTANCIA);" type="AGGREGATE">
+<attr name="guiDescription"><![CDATA[OBTÉM MAIOR E MENOR DATA]]></attr>
+</Node>
+<Node enabled="enabled" guiName="MAQL DML Execute" guiX="1236" guiY="-95" id="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL" maqlInputField="syntax_content" type="MAQL_DML_EXECUTE">
+<attr name="guiDescription"><![CDATA[APAGA DADOS FATO HKL]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="1069" guiY="-95" id="REFORMAT_MENOR_DATA" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	
+	string load_mode = '${LOAD_MODE_FCT}';
+	if (upperCase(load_mode) == 'INCREMENTAL') {
+        $out.0.syntax_content = 'DELETE FROM {attr.envelopedeferias.factsof} WHERE {label.instancia.instancia} = "' + $in.0.Instancia + '" AND {datacorte.date.yyyymmdd} BETWEEN '+'"'+date2str($in.0.Min_Date, "yyyy-MM-dd")+'" AND "'+date2str($in.0.Max_Date, "yyyy-MM-dd")+'"';
+	} else {
+		$out.0.syntax_content = 'DELETE FROM {attr.envelopedeferias.factsof}';
+	}
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+<attr name="guiDescription"><![CDATA[GERA STATEMENT DE DELETE]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="AGGREGATE_MENOR_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="REFORMAT_MENOR_DATA:0"/>
+<Edge debugMode="true" fromNode="REFORMAT_MENOR_DATA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 0 (input)" metadata="Metadata4" outPort="Port 0 (out)" toNode="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL:0"/>
+</Phase>
+<Phase number="30">
+<Node enabled="enabled" equalNULL="false" guiName="Aggregate" guiX="897" guiY="87" id="AGGREGATE_MENOR_DATA1" mapping="$Min_Date:=min($DATA_CORTE);$Max_Date:=max($DATA_CORTE);$Instancia:=first($INSTANCIA);" type="AGGREGATE">
+<attr name="guiDescription"><![CDATA[OBTÉM MAIOR E MENOR DATA]]></attr>
+</Node>
+<Node enabled="enabled" guiName="MAQL DML Execute" guiX="1236" guiY="87" id="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL1" maqlInputField="syntax_content" type="MAQL_DML_EXECUTE">
+<attr name="guiDescription"><![CDATA[APAGA DADOS FATO HKL]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Reformat" guiX="1069" guiY="87" id="REFORMAT_MENOR_DATA1" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	long MONTHS_TO_LOAD = str2long('${MONTHS_TO_LOAD}');
+	string THIS_MONTH = right(left(date2str(today(), 'dd/MM/yyyy'), 5), 2);
+	string THIS_YEAR = right(date2str(today(), 'dd/MM/yyyy'), 4);
+	date ETL_MAXDATE = dateAdd(str2date('01/' + THIS_MONTH + '/' + THIS_YEAR, 'dd/MM/yyyy'), -1*MONTHS_TO_LOAD, month);
+	
+	$out.0.syntax_content = 'DELETE FROM {attr.envelopedeferias.factsof} WHERE {datacorte.date.yyyymmdd} < "' + ETL_MAXDATE + '"';
+	
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+<attr name="guiDescription"><![CDATA[GERA STATEMENT DE DELETE]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="AGGREGATE_MENOR_DATA1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge8" inPort="Port 0 (in)" metadata="Metadata5" outPort="Port 0 (out)" toNode="REFORMAT_MENOR_DATA1:0"/>
+<Edge debugMode="true" fromNode="REFORMAT_MENOR_DATA1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge7" inPort="Port 0 (input)" metadata="Metadata4" outPort="Port 0 (out)" toNode="MAQL_DML_EXECUTE_DELETE_DATA_FATO_HKL1:0"/>
+</Phase>
+<Phase number="40">
+<Node dataset="dataset.envelopedeferias" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.envelopedeferias&quot;,&quot;datasetTitle&quot;:&quot;Envelope de Férias&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.envelopedeferias.codigoincidenciaferias&quot;,&quot;title&quot;:&quot;Código Incidência Férias&quot;,&quot;prettyId&quot;:&quot;attr_envelopedeferias_codigoincidenciaferias&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.envelopedeferias.codigoincidenciaferias&quot;,&quot;title&quot;:&quot;Código Incidência Férias&quot;,&quot;prettyId&quot;:&quot;codigoincidenciaferias&quot;,&quot;assignedMetadataField&quot;:&quot;TIPO_INCIDENCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.envelopedeferias.descricaoincidenciaferias&quot;,&quot;title&quot;:&quot;Descrição Incidência Férias&quot;,&quot;prettyId&quot;:&quot;attr_envelopedeferias_descricaoincidenciaferias&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.envelopedeferias.descricaoincidenciaferias&quot;,&quot;title&quot;:&quot;Descrição Incidência Férias&quot;,&quot;prettyId&quot;:&quot;descricaoincidenciaferias&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_INCIDENCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.envelopedeferias.indiceespecificoferias&quot;,&quot;title&quot;:&quot;Índice Específico Férias&quot;,&quot;prettyId&quot;:&quot;attr_envelopedeferias_indiceespecificoferias&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.envelopedeferias.indiceespecificoferias&quot;,&quot;title&quot;:&quot;Índice Específico Férias&quot;,&quot;prettyId&quot;:&quot;indiceespecificoferias&quot;,&quot;assignedMetadataField&quot;:&quot;INDICE_ESPEC_FERIAS&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.envelopedeferias.sequenciaferias&quot;,&quot;title&quot;:&quot;Sequência Férias&quot;,&quot;prettyId&quot;:&quot;attr_envelopedeferias_sequenciaferias&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.envelopedeferias.sequenciaferias&quot;,&quot;title&quot;:&quot;Sequência Férias&quot;,&quot;prettyId&quot;:&quot;sequenciaferias&quot;,&quot;assignedMetadataField&quot;:&quot;SEQUENCIA_REGISTRO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.envelopedeferias.tipocalculoferias&quot;,&quot;title&quot;:&quot;Tipo Cálculo Férias&quot;,&quot;prettyId&quot;:&quot;attr_envelopedeferias_tipocalculoferias&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.envelopedeferias.tipocalculoferias&quot;,&quot;title&quot;:&quot;Tipo Cálculo Férias&quot;,&quot;prettyId&quot;:&quot;tipocalculoferias&quot;,&quot;assignedMetadataField&quot;:&quot;TIPO_CALCULO_FERIAS&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;attr_cadastrodefuncionario_pkfuncionario&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNCIONARIO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cadastrodefuncionario.pkfuncionario&quot;,&quot;title&quot;:&quot;PK Funcionário&quot;,&quot;prettyId&quot;:&quot;cadastrodefuncionario__pkfuncionario&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;attr_cargo_pkcargo&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;cargo__pkcargo&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_CARGO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.cargo.pkcargo&quot;,&quot;title&quot;:&quot;PK Cargo&quot;,&quot;prettyId&quot;:&quot;cargo__pkcargo&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_categoriasalarial_pkcategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;categoriasalarial__pkcategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_CATEG_SAL&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.categoriasalarial.pkcategoriasalarial&quot;,&quot;title&quot;:&quot;PK Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;categoriasalarial__pkcategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_centrodecusto_pkcentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;centrodecusto__pkcentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_CCUSTO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.centrodecusto.pkcentrocusto&quot;,&quot;title&quot;:&quot;PK Centro Custo&quot;,&quot;prettyId&quot;:&quot;centrodecusto__pkcentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;attr_empresa_pkempresa&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;empresa__pkempresa&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_EMPRESA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.empresa.pkempresa&quot;,&quot;title&quot;:&quot;PK Empresa&quot;,&quot;prettyId&quot;:&quot;empresa__pkempresa&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;attr_estabelecimento_pkestabelecimento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;estabelecimento__pkestabelecimento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_ESTAB&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.estabelecimento.pkestabelecimento&quot;,&quot;title&quot;:&quot;PK Estabelecimento&quot;,&quot;prettyId&quot;:&quot;estabelecimento__pkestabelecimento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.evento.pkevento&quot;,&quot;title&quot;:&quot;PK Evento&quot;,&quot;prettyId&quot;:&quot;attr_evento_pkevento&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.pkevento&quot;,&quot;title&quot;:&quot;PK Evento&quot;,&quot;prettyId&quot;:&quot;evento__pkevento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;EVENTO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.evento.pkevento&quot;,&quot;title&quot;:&quot;PK Evento&quot;,&quot;prettyId&quot;:&quot;evento__pkevento&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;attr_historicocategoriasalarial_pkhistoricocategoriasalarial&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;historicocategoriasalarial__pkhistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_CATEG_SAL&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocategoriasalarial.pkhistoricocategoriasalarial&quot;,&quot;title&quot;:&quot;PK Histórico Categoria Salarial&quot;,&quot;prettyId&quot;:&quot;historicocategoriasalarial__pkhistoricocategoriasalarial&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_historicocentrodecusto_pkhistoricocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;historicocentrodecusto__pkhistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_CCUSTO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;historicocentrodecusto__pkhistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_historicoturnodetrabalho_pkhistoricoturnotrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;historicoturnodetrabalho__pkhistoricoturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_TURNO_TURMA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicoturnodetrabalho.pkhistoricoturnotrabalho&quot;,&quot;title&quot;:&quot;PK Histórico Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;historicoturnodetrabalho__pkhistoricoturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedelotacao_pkhistoricounidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;historicounidadedelotacao__pkhistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HIST_UNIDADE_LOTACAO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedelotacao.pkhistoricounidadelotacao&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;historicounidadedelotacao__pkhistoricounidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_historicounidadedenegocio_pkhistoricounidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;historicounidadedenegocio__pkhistoricounidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_HISTOR_FUNC_UNID_NEGOC&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicounidadedenegocio.pkhistoricounidadenegocio&quot;,&quot;title&quot;:&quot;PK Histórico Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;historicounidadedenegocio__pkhistoricounidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;attr_turnodetrabalho_pkturnotrabalho&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;turnodetrabalho__pkturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_TURNO_TURMA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.turnodetrabalho.pkturnotrabalho&quot;,&quot;title&quot;:&quot;PK Turno Trabalho&quot;,&quot;prettyId&quot;:&quot;turnodetrabalho__pkturnotrabalho&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;attr_unidadedelotacao_pkunidadelotacao&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;unidadedelotacao__pkunidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_UNIDADE_LOTACAO&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedelotacao.pkunidadelotacao&quot;,&quot;title&quot;:&quot;PK Unidade Lotação&quot;,&quot;prettyId&quot;:&quot;unidadedelotacao__pkunidadelotacao&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;attr_unidadedenegocio_pkunidadenegocio&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;unidadedenegocio__pkunidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;PK_FUNC_UNID_NEGOC&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.unidadedenegocio.pkunidadenegocio&quot;,&quot;title&quot;:&quot;PK Unidade Negócio&quot;,&quot;prettyId&quot;:&quot;unidadedenegocio__pkunidadenegocio&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datacorte.date&quot;,&quot;title&quot;:&quot;Date (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_CORTE&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datacorte.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datacorte.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Corte)&quot;,&quot;prettyId&quot;:&quot;datacorte_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafim.date&quot;,&quot;title&quot;:&quot;Date (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_FIM_FERIAS&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datainicio.date&quot;,&quot;title&quot;:&quot;Date (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio&quot;,&quot;assignedMetadataField&quot;:&quot;INICIO_FERIAS&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datapagamento.date&quot;,&quot;title&quot;:&quot;Date (Data Pagamento)&quot;,&quot;prettyId&quot;:&quot;datapagamento&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_PAGAMENTO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datapagamento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Pagamento)&quot;,&quot;prettyId&quot;:&quot;datapagamento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datapagamento.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Pagamento)&quot;,&quot;prettyId&quot;:&quot;datapagamento_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.baseinformadaferias&quot;,&quot;title&quot;:&quot;Base Informada Férias&quot;,&quot;prettyId&quot;:&quot;baseinformadaferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;TOTAL_BASE&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.basemesinicioferias&quot;,&quot;title&quot;:&quot;Base Mês Início Férias&quot;,&quot;prettyId&quot;:&quot;basemesinicioferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;BASE_MES_INICIO&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.basemesseguinteferias&quot;,&quot;title&quot;:&quot;Base Mês Seguinte Férias&quot;,&quot;prettyId&quot;:&quot;basemesseguinteferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;BASE_MES_SEGUINTE&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.quantidademesinicioferias&quot;,&quot;title&quot;:&quot;Quantidade Mês Início Férias&quot;,&quot;prettyId&quot;:&quot;quantidademesinicioferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;QUANTIDADE_MES_INICIO&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.quantidademesseguinteferias&quot;,&quot;title&quot;:&quot;Quantidade Mês Seguinte Férias&quot;,&quot;prettyId&quot;:&quot;quantidademesseguinteferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;QUANTIDADE_MES_SEGUINT&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.totaldiasferias&quot;,&quot;title&quot;:&quot;Total Dias Férias&quot;,&quot;prettyId&quot;:&quot;totaldiasferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;TOTAL_DIAS&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.valorefpmesinicioferias&quot;,&quot;title&quot;:&quot;Valor EFP Mês Início Férias&quot;,&quot;prettyId&quot;:&quot;valorefpmesinicioferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;VALOR_EFP_MES_INICIO&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.valorefpmesseguinteferias&quot;,&quot;title&quot;:&quot;Valor EFP Mês Seguinte Férias&quot;,&quot;prettyId&quot;:&quot;valorefpmesseguinteferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;VALOR_EFPMES_SEGUINTE&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.valorferias&quot;,&quot;title&quot;:&quot;Valor Férias&quot;,&quot;prettyId&quot;:&quot;valorferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;TOTA_VALOR&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.valormesinicioferias&quot;,&quot;title&quot;:&quot;Valor Mês Início Férias&quot;,&quot;prettyId&quot;:&quot;valormesinicioferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;VALOR_MES_INICIO&quot;}},{&quot;gd_dataset_fact&quot;:{&quot;id&quot;:&quot;fact.envelopedeferias.valormesseguinteferias&quot;,&quot;title&quot;:&quot;Valor Mês Seguinte Férias&quot;,&quot;prettyId&quot;:&quot;valormesseguinteferias&quot;,&quot;type&quot;:&quot;DECIMAL&quot;,&quot;assignedMetadataField&quot;:&quot;VALOR_MES_SEG&quot;}}],&quot;dateFacts&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;unassigneddateFacts&quot;:[]}}" enabled="enabled" guiName="Envelope de Férias" guiX="1064" guiY="249" id="ENVELOPE_DE_FERIAS1" mode="${LOAD_MODE_FCT}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="SimpleCopy" guiX="897" guiY="249" id="SIMPLE_COPY1" type="SIMPLE_COPY"/>
+<Edge debugMode="true" fromNode="SIMPLE_COPY1:0" guiBendpoints="" guiRouter="Manhattan" id="Edge16" inPort="Port 0 (in)" metadata="Metadata1" outPort="Port 0 (out)" toNode="ENVELOPE_DE_FERIAS1:0"/>
+</Phase>
+</Graph>

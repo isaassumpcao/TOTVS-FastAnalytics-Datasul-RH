@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 17:10:13 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.51" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata18" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH .zip)#empresa.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH .zip)#empresa.csv" name="empresa_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH .zip)#empresa.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_EMPRESA" type="string"/>
+<Field name="COD_EMPRESA" type="string"/>
+<Field name="RAZAO_SOCIAL" type="string"/>
+<Field name="CGC" type="string"/>
+<Field eofAsDelimiter="false" name="INSCRICAO_ESTADUAL" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata30" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#empresa.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#empresa.csv" name="Instancia_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#empresa.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET DE INSTÂNCIA (DIM)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="900" x="12" y="10"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node dedupKey="INSTANCIA(a)" enabled="enabled" guiName="Dedup" guiX="590" guiY="43" id="DEDUP" type="DEDUP"/>
+<Node enabled="enabled" guiName="FastSort" guiX="404" guiY="43" id="FAST_SORT" sortKey="INSTANCIA(a)" type="FAST_SORT"/>
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#empresa.csv" guiName="Instância" guiX="28" guiY="43" id="INSTANCIA" type="DATA_READER"/>
+<Node dataset="dataset.instancia" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.instancia&quot;,&quot;datasetTitle&quot;:&quot;Instância&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia&quot;,&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia&quot;,&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}}}],&quot;referencedAttributes&quot;:[],&quot;dateAttributes&quot;:[],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;datesWithFactConflict&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[]}}" enabled="enabled" guiName="Instância" guiX="767" guiY="43" id="INSTANCIA1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="214" guiY="43" id="TRATAMENT20" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="DEDUP:0" guiBendpoints="" guiRouter="Manhattan" id="Edge6" inPort="Port 0 (in)" metadata="Metadata30" outPort="Port 0 (unique)" toNode="INSTANCIA1:0"/>
+<Edge debugMode="true" fromNode="FAST_SORT:0" guiBendpoints="" guiRouter="Manhattan" id="Edge5" inPort="Port 0 (in)" metadata="Metadata30" outPort="Port 0 (out)" toNode="DEDUP:0"/>
+<Edge debugMode="true" fromNode="INSTANCIA:0" guiBendpoints="" guiRouter="Manhattan" id="Edge74" inPort="Port 0 (in)" metadata="Metadata18" outPort="Port 0 (output)" toNode="TRATAMENT20:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT20:0" guiBendpoints="" guiRouter="Manhattan" id="Edge3" inPort="Port 0 (in)" metadata="Metadata30" outPort="Port 0 (out)" toNode="FAST_SORT:0"/>
+</Phase>
+</Graph>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="elisangela.madeira" created="Mon Apr 01 07:35:21 CST 2019" guiVersion="3.4.4.P" id="1554226728976" licenseType="Commercial" modified="Fri Jul 05 15:53:05 BRT 2019" modifiedBy="elisangela.madeira" name="DIMENSAO" revision="1.52" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata2" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_ccusto.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_ccusto.csv" name="historico_func_ccusto_input" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_ccusto.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="COD_CENTRO_CUSTO" type="string"/>
+<Field name="DESC_CCUSTO" type="string"/>
+<Field name="DATA_INICIO_LOTACAO" type="string"/>
+<Field eofAsDelimiter="false" name="DATA_FIM_LOTACAO" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata3" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_ccusto.csv" previewAttachmentCharset="ISO-8859-1">
+<Record fieldDelimiter="," label="zip:(./data/source/DataSulRH.zip)#historico_func_ccusto.csv" name="historico_func_ccusto_output" previewAttachment="zip:(${DATA_SOURCE_DIR}/DataSulRH.zip)#historico_func_ccusto.csv" previewAttachmentCharset="ISO-8859-1" quoteChar="&quot;" quotedStrings="true" recordDelimiter="\n" skipSourceRows="1" type="delimited">
+<Field name="INSTANCIA" type="string"/>
+<Field name="PK_HIST_CCUSTO" type="string"/>
+<Field name="COD_CENTRO_CUSTO" type="string"/>
+<Field name="DESC_CCUSTO" type="string"/>
+<Field format="yyyyMMdd HH:mm:ss" name="DATA_INICIO_LOTACAO" type="date"/>
+<Field eofAsDelimiter="false" format="yyyyMMdd HH:mm:ss" name="DATA_FIM_LOTACAO" type="date"/>
+</Record>
+</Metadata>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Note alignment="1" backgroundColorB="225" backgroundColorG="255" backgroundColorR="255" enabled="true" folded="false" height="133" id="Note0" textColorB="0" textColorG="0" textColorR="0" textFontSize="8" title="1. CARGA DO DATASET HISTÓRICO CENTRO DE CUSTO (DIMENSÃO)" titleColorB="0" titleColorG="0" titleColorR="0" titleFontSize="10" width="655" x="19" y="20"/>
+<Dictionary/>
+</Global>
+<Phase number="10">
+<Node charset="ISO-8859-1" enabled="enabled" fileURL="zip:(${DATA_SOURCE_DIR}/${gdc_agent_zip})#historico_func_ccusto.csv" guiName="Histórico Centro de Custo" guiX="35" guiY="53" id="HISTORICO_CENTRO_DE_CUSTO" type="DATA_READER"/>
+<Node dataset="dataset.historicocentrodecusto" datasetFieldMappings="{&quot;gd_dataset&quot;:{&quot;datasetId&quot;:&quot;dataset.historicocentrodecusto&quot;,&quot;datasetTitle&quot;:&quot;Histórico Centro de Custo&quot;,&quot;attributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocentrodecusto.codigohistoricocentrocusto&quot;,&quot;title&quot;:&quot;Código Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_historicocentrodecusto_codigohistoricocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.codigohistoricocentrocusto&quot;,&quot;title&quot;:&quot;Código Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;codigohistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;COD_CENTRO_CUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocentrodecusto.descricaohistoricocentrocusto&quot;,&quot;title&quot;:&quot;Descrição Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_historicocentrodecusto_descricaohistoricocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.descricaohistoricocentrocusto&quot;,&quot;title&quot;:&quot;Descrição Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;descricaohistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;DESC_CCUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}},{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;attr_historicocentrodecusto_pkhistoricocentrocusto&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.historicocentrodecusto.pkhistoricocentrocusto&quot;,&quot;title&quot;:&quot;PK Histórico Centro Custo&quot;,&quot;prettyId&quot;:&quot;pkhistoricocentrocusto&quot;,&quot;assignedMetadataField&quot;:&quot;PK_HIST_CCUSTO&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;assignedMetadataField&quot;:null,&quot;selectedDisplayForm&quot;:null}}],&quot;referencedAttributes&quot;:[{&quot;gd_dataset_attribute&quot;:{&quot;id&quot;:&quot;attr.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;attr_instancia_instancia&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}],&quot;assignedMetadataField&quot;:&quot;INSTANCIA&quot;,&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;label.instancia.instancia&quot;,&quot;title&quot;:&quot;Instância&quot;,&quot;prettyId&quot;:&quot;instancia__instancia&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:false}}}}],&quot;dateAttributes&quot;:[{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datafim.date&quot;,&quot;title&quot;:&quot;Date (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_FIM_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datafim.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Fim)&quot;,&quot;prettyId&quot;:&quot;datafim_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}},{&quot;gd_dataset_date_attribute&quot;:{&quot;id&quot;:&quot;datainicio.date&quot;,&quot;title&quot;:&quot;Date (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio&quot;,&quot;assignedMetadataField&quot;:&quot;DATA_INICIO_LOTACAO&quot;,&quot;displayForms&quot;:[{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}}],&quot;selectedDisplayForm&quot;:{&quot;gd_dataset_attribute_display_form&quot;:{&quot;id&quot;:&quot;datainicio.date.yyyymmdd&quot;,&quot;title&quot;:&quot;yyyy-mm-dd (Data Início)&quot;,&quot;prettyId&quot;:&quot;datainicio_date_yyyymmdd&quot;,&quot;assignedMetadataField&quot;:null,&quot;type&quot;:&quot;STRING&quot;,&quot;referenceKey&quot;:true}},&quot;associatedFact&quot;:null}}],&quot;simpleFacts&quot;:[],&quot;dateFacts&quot;:[],&quot;unassigneddateFacts&quot;:[],&quot;fieldsWithMetadataConflict&quot;:[],&quot;entitiesWithoutMetadata&quot;:[],&quot;entitiesWithoutValue&quot;:[],&quot;datesWithFactConflict&quot;:[]}}" enabled="enabled" guiName="Histórico Centro de Custo" guiX="459" guiY="53" id="HISTORICO_CENTRO_DE_CUSTO1" mode="${LOAD_MODE_DIM}" retriesInterval="60" retriesNumber="5" type="GD_DATASET_WRITER"/>
+<Node enabled="enabled" guiName="Tratament" guiX="272" guiY="53" id="TRATAMENT4" type="REFORMAT">
+<attr name="transform"><![CDATA[//#CTL2
+import "trans/lib.ctl";
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.INSTANCIA = formatString($in.0.INSTANCIA,null);
+	$out.0.PK_HIST_CCUSTO = formatString($in.0.INSTANCIA,null) + '|' + formatString($in.0.PK_HIST_CCUSTO,null);
+	$out.0.COD_CENTRO_CUSTO = formatString($in.0.COD_CENTRO_CUSTO,null);
+	$out.0.DESC_CCUSTO = formatString($in.0.DESC_CCUSTO,null);
+	$out.0.DATA_INICIO_LOTACAO = formatDate($in.0.DATA_INICIO_LOTACAO);
+	$out.0.DATA_FIM_LOTACAO = formatDate($in.0.DATA_FIM_LOTACAO);
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="HISTORICO_CENTRO_DE_CUSTO:0" guiBendpoints="" guiRouter="Manhattan" id="Edge12" inPort="Port 0 (in)" metadata="Metadata2" outPort="Port 0 (output)" toNode="TRATAMENT4:0"/>
+<Edge debugMode="true" fromNode="TRATAMENT4:0" guiBendpoints="" guiRouter="Manhattan" id="Edge13" inPort="Port 0 (in)" metadata="Metadata3" outPort="Port 0 (out)" toNode="HISTORICO_CENTRO_DE_CUSTO1:0"/>
+</Phase>
+</Graph>

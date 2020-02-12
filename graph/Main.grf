@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph author="fernando.miranda" created="Wed Mar 29 06:02:53 PDT 2017" guiVersion="3.4.4.P" id="1490818543324" licenseType="Commercial" modified="Mon Jul 08 18:06:46 BRT 2019" modifiedBy="elisangela.madeira" name="ETL_MAINJOB" revision="1.34" showComponentDetails="true">
+<Global>
+<Property fileURL="workspace.prm" id="GraphParameter0"/>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node baseURL="https://${USER_PWD_SECURE_DI}@secure-di.gooddata.com/project-uploads/${GDC_PROJECT_ID}/${gdc_agent_zip}" destination="${DATA_SOURCE_DIR}" enabled="enabled" guiName="DOWNLOAD" guiX="33" guiY="154" id="DOWNLOAD" type="FILE_DOWNLOAD"/>
+</Phase>
+<Phase number="1">
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Main_Dimensao.grf" guiName="DIMENSOES" guiX="205" guiY="154" id="DIMENSOES1" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+</Phase>
+<Phase number="2">
+<Node enabled="enabled" graphName="${GRAPH_DIR}/Main_Fato.grf" guiName="FATOS" guiX="376" guiY="154" id="FATOS1" paramsToPass="gdc_agent_zip;LOAD_MODE_DIM;LOAD_MODE_FCT;DATE_LOCALE;NUMBER_LOCALE;NUMBER_MASK;MONTHS_TO_LOAD" type="RUN_GRAPH"/>
+</Phase>
+</Graph>
