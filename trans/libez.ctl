@@ -7,6 +7,11 @@ date   GOODDATA_MAXDATE = str2date('${GOODDATA_MAXDATE}', 'yyyy-MM-dd');
 date   data;
 string TipoPessoa;
 
+<<<<<<< HEAD
+=======
+//Agora sim ctz q vai!!!!!!...!23455574
+
+>>>>>>> branch 'master' of https://github.com/TOTVS-GoodData/TOTVS-FastAnalytics-Datasul-RH
 // Função de tratamento de campos tipo decimal.
 function decimal formatDecimal(string  format) {
     if((format == null) or (trim(format) == '')) {
