@@ -7,9 +7,9 @@ date   GOODDATA_MAXDATE = str2date('${GOODDATA_MAXDATE}', 'yyyy-MM-dd');
 date   data;
 string TipoPessoa;
 
-//agora vai karai....wedessdweddasddddddddddadsdd54efqrdddddwsdddggwswwe2wd
+//Agora sim ctz q vai!
 
-// Função de tratamento de campos tipo decimal.fdsa
+// Função de tratamento de campos tipo decimal.
 function decimal formatDecimal(string  format) {
     if((format == null) or (trim(format) == '')) {
         return 0;
