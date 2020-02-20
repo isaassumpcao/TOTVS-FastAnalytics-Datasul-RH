@@ -4,7 +4,7 @@
 
 //Controle de base de demonstração.
 string GOODDATA_DEMO_MODE = upperCase('${DEMO_MODE}');
-string GOODDATA_DEMO_DATE = str2date('${DEMO_DATE}', 'yyyy-MM-dd');
+date GOODDATA_DEMO_DATE = str2date('${DEMO_DATE}', 'yyyy-MM-dd');
 
 //Valor máximo permitido no GoodData.
 double GOODDATA_MAXVALUE = str2double('${NUMBER_MAXSIZE}', '${NUMBER_PATTERN}','${NUMBER_LOCALE}');
@@ -89,8 +89,8 @@ function date formatDate(string format) {
             return null;
         } else {
             if (GOODDATA_DEMO_MODE == 'S') {
-                return dateAdd(data, today() - GOODDATA_DEMO_DATE, day);
-            else
+                return dateAdd(data, dateDiff(today(), GOODDATA_DEMO_DATE, day), day);
+            } else {
                 return data;
             }
         }
