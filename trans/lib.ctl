@@ -3,8 +3,9 @@
 //===============================================//
 
 //Controle de base de demonstração.
+date GOODDATA_DEMO_DATE;
 string GOODDATA_DEMO_MODE = upperCase('${DEMO_MODE}');
-date GOODDATA_DEMO_DATE = str2date('${DEMO_DATE}', 'yyyy-MM-dd');
+if (GOODDATA_DEMO_MODE == 'S') { GOODDATA_DEMO_DATE = str2date('${DEMO_DATE}', 'yyyy-MM-dd'); }
 
 //Valor máximo permitido no GoodData.
 double GOODDATA_MAXVALUE = str2double('${NUMBER_MAXSIZE}', '${NUMBER_PATTERN}','${NUMBER_LOCALE}');
@@ -27,6 +28,7 @@ date   ETL_MAXDATE = dateAdd(str2date('01/' + THIS_MONTH + '/' + THIS_YEAR, 'dd/
 date  data;
 string TipoPessoa;
 
+T.T...
 
 //===============================================//
 //            FUNÇÕES DA BIBLIOTECA              //
@@ -34,10 +36,10 @@ string TipoPessoa;
 
 // Função de tratamento de campos tipo decimal.
 function decimal formatDecimal(string  format) {
-    if((format == null) or (trim(format) == '')) {
+    if ((format == null) or (trim(format) == '')) {
         return 0;
     } else {
-        if(str2decimal(trim(format), '${NUMBER_PATTERN}','${NUMBER_LOCALE}') >= GOODDATA_MAXVALUE) {
+        if (str2decimal(trim(format), '${NUMBER_PATTERN}','${NUMBER_LOCALE}') >= GOODDATA_MAXVALUE) {
             return 0;
         } else {
             if (GOODDATA_DEMO_MODE == 'S') {
@@ -51,10 +53,10 @@ function decimal formatDecimal(string  format) {
 
 // Função de tratamento de campos tipo long.
 function long formatLong(string  format) {
-    if((format == null) or (trim(format) == '')) {
+    if ((format == null) or (trim(format) == '')) {
         return 0;
     } else {
-        if(abs(str2long(trim(format), '${NUMBER_PATTERN}','${NUMBER_LOCALE}')) >= GOODDATA_MAXVALUE) {
+        if (abs(str2long(trim(format), '${NUMBER_PATTERN}','${NUMBER_LOCALE}')) >= GOODDATA_MAXVALUE) {
             return 0;
         } else {
             if (GOODDATA_DEMO_MODE == 'S') {
@@ -68,7 +70,7 @@ function long formatLong(string  format) {
 
 // Função de tratamento de campos tipo string.
 function string formatString(string format, string demoValue) {
-    if((format == null) or (trim(format) == '')) {
+    if ((format == null) or (trim(format) == '')) {
         return 'N/A';
     } else {
         if ((GOODDATA_DEMO_MODE == 'S') and (demoValue <> null)) {
@@ -81,14 +83,14 @@ function string formatString(string format, string demoValue) {
 
 // Função de tratamento de campos tipo date.
 function date formatDate(string format) {
-    if((format == null) or (trim(format) == '')) {
+    if ((format == null) or (trim(format) == '')) {
         return null;
     } else {
         data = str2date(format, '${DATE_PATTERN}', '${DATE_LOCALE}');
         if ((data < GOODDATA_MINDATE) || (data > GOODDATA_MAXDATE)) {
             return null;
         } else {
-            if (GOODDATA_DEMO_MODE == 'S') {
+            if ((GOODDATA_DEMO_MODE == 'S') and (GOODDATA_DEMO_DATE <> null)) {
                 return dateAdd(data, dateDiff(today(), GOODDATA_DEMO_DATE, day), day);
             } else {
                 return data;
@@ -102,7 +104,7 @@ function date formatDate(string format) {
     //valor1 - Valor da primeira data em String.
     //valor2 - Valor da segunda data em String.
 function decimal formatDate2(string valor1, string valor2) {
-    if(((valor1 == null) or (trim(valor1) == '')) or ((valor2 == null) or (trim(valor2) == ''))) {
+    if (((valor1 == null) or (trim(valor1) == '')) or ((valor2 == null) or (trim(valor2) == ''))) {
         return 0.0;
     } else {
         date data1 = str2date(valor1, "yyyyMMdd HH:mm:ss", '${DATE_LOCALE}');
@@ -119,8 +121,8 @@ function decimal formatDate2(string valor1, string valor2) {
 // Função de tratamento para chaves PROTHEUS.
 function string formatKey(string format) {
     if((format == null) or (trim(format) == '')) {
-        return '${INSTANCIA}' + '|INDEFINIDO';
+        return 'INDEFINIDO';
     } else {
-        return '${INSTANCIA}' + format;
+        return format;
     }
 }
